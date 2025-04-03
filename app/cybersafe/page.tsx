@@ -1,6 +1,9 @@
 import { redirect } from 'next/navigation';
 import { headers } from 'next/headers';
 
+// Cấu hình dynamic rendering
+export const dynamic = "force-dynamic";
+
 export default async function CyberSafePage() {
   const headersList = await headers();
   const acceptLanguage = headersList.get('accept-language');
