@@ -1,31 +1,22 @@
-import { redirect } from 'next/navigation';
-import { headers } from 'next/headers';
+'use client';
 
-// Cấu hình dynamic rendering
-export const dynamic = "force-dynamic";
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
-export default async function CyberSafePage() {
-  const headersList = await headers();
-  const acceptLanguage = headersList.get('accept-language');
+export default function CyberSafePage() {
+  const router = useRouter();
 
-  console.log("acceptLanguage", acceptLanguage);
-  
-  // Lấy ngôn ngữ ưu tiên từ Accept-Language header
-  const getPreferredLocale = () => {
-    if (!acceptLanguage) return 'en';
-    
-    const languages = acceptLanguage.split(',');
-    const preferredLanguage = languages[0].split('-')[0].toLowerCase();
-    
-    // Kiểm tra nếu ngôn ngữ ưu tiên là tiếng Việt
+  useEffect(() => {
+    const acceptLanguage = navigator.language || 'en';
+    const preferredLanguage = acceptLanguage.split('-')[0].toLowerCase();
+
+    // Redirect based on the preferred language
     if (preferredLanguage === 'vi') {
-      return 'vi';
+      router.push('/cybersafe/vi');
+    } else {
+      router.push('/cybersafe/en');
     }
-    
-    // Mặc định là tiếng Anh
-    return 'en';
-  };
+  }, [router]);
 
-  // Chuyển hướng đến trang home của ngôn ngữ phù hợp
-  redirect(`/cybersafe/${getPreferredLocale()}`);
+  return null; // Render nothing while redirecting
 }
