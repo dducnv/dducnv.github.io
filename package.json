@@ -12,6 +12,7 @@
     "@tailwindcss/typography": "^0.0.0-insiders.0339c42",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
+    "lucide-react": "^0.503.0",
     "motion": "^12.4.3",
     "next": "15.1.7",
     "next-intl": "^4.0.2",

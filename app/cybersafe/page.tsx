@@ -18,5 +18,7 @@ export default function CyberSafePage() {
     }
   }, [router]);
 
-  return null; // Render nothing while redirecting
+  return <div className='text-center py-10'>
+    <span>Loading...</span>
+  </div>; // Render nothing while redirecting
 }

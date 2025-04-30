@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -28,15 +29,21 @@ export default function Home() {
             Xin chào! Tôi là Đức, một lập trình viên trẻ đam mê công nghệ. Hiện tại, tôi là nhà phát triển ứng dụng sử dụng Flutter và không ngừng học hỏi để nâng cao kỹ năng. Tôi đã tốt nghiệp FPT Aptech và đang tiếp tục theo học tại PTIT.
           </p>
           <p className="text-base md:text-lg animate">
-            Ngoài lập trình, tôi yêu thích các thiết bị điện tử, đam mê chế tạo sản phẩm D.I.Y, chụp ảnh phong cảnh và thưởng thức nhạc Rock.
+            Ngoài lập trình, tôi yêu thích các thiết bị điện tử, đam mê làm các sản phẩm D.I.Y, chụp ảnh phong cảnh và thưởng thức nhạc Rock.
 
           </p>
 
           <p className="mt-4 text-base md:text-lg animate">Một số dự án cá nhân tiêu biểu tôi đã thực hiện:</p>
           <ul className="mt-2 space-y-2 list-disc list-inside text-gray-700">
-            <li className="animate"><strong>PicTrim</strong> - Ứng dụng chỉnh sửa ảnh với các tính năng làm tròn góc, thêm viền trắng, đổ bóng.</li>
-            <li className="animate"><strong>CyberSafe</strong> - Trình quản lý mật khẩu an toàn và bảo mật.</li>
-            <li className="animate"><strong>Samon</strong> - Ứng dụng quản lý chi tiêu.</li>
+            <li className="animate">
+              <Link href={"https://play.google.com/store/apps/details?id=com.duc_app_lab_ind.pic_trim_app"} target={"_blank"}>
+                <strong>PicTrim</strong>
+              </Link> - Ứng dụng chỉnh sửa ảnh với các tính năng làm tròn góc, thêm viền trắng, đổ bóng.</li>
+              <ol></ol>
+            <li className="animate">
+              <Link href={"/cybersafe"} target={"_blank"}>
+                <strong>CyberSafe</strong>
+              </Link> - Trình quản lý mật khẩu ngoại tuyến an toàn và bảo mật.</li>
           </ul>
         </div>
       </div>
