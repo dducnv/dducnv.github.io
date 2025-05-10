@@ -44,6 +44,11 @@ export default function Home() {
               <Link href={"/cybersafe"} target={"_blank"}>
                 <strong>CyberSafe</strong>
               </Link> - Trình quản lý mật khẩu ngoại tuyến an toàn và bảo mật.</li>
+            <li className="animate">
+              <Link href={"https://play.google.com/store/apps/details?id=com.duc_innolab.game.tetrafall"} target={"_blank"}>
+                <strong>Tetrafall (Sắp ra mắt)</strong>
+              </Link> - Trò chơi xếp hình cổ điển.
+            </li>
           </ul>
         </div>
       </div>
