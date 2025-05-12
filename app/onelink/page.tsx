@@ -64,7 +64,7 @@ const projects = [
 
 const page = () => {
     return (
-        <div className="fixed inset-0 z-50 w-screen h-screen bg-white overflow-auto flex flex-col items-center justify-center px-2 md:px-4 py-8 md:py-16">
+        <div className="fixed inset-0 z-50 w-screen h-screen bg-white overflow-auto flex flex-col items-center justify-center px-2 py-12">
             <div className="w-full max-w-md flex flex-col items-center">
                 {/* Profile Card */}
                 <div className="w-full bg-white border border-gray-200 rounded-3xl  p-8 flex flex-col items-center mb-2">
