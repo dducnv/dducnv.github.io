@@ -31,10 +31,12 @@ const page = () => {
                     <li><strong>Prohibited Activities:</strong> Users may not modify, distribute, or reverse-engineer any part of the app.</li>
                 </ul>
 
-                <h2 className="font-bold">3. Subscription & Tickets</h2>
+                <h2 className="font-bold">3. In-App Subscriptions</h2>
                 <ul className="list-disc pl-10">
-                    <li><strong>Subscription Plan:</strong> Users can subscribe to a premium plan to unlock unlimited tickets and remove ads.</li>
-                    <li><strong>Ticket System:</strong> Each image export consumes one ticket. Users can obtain tickets through subscriptions or by watching ads.</li>
+                    <li><strong>Subscription Benefits:</strong> Subscribing to PicTrim Premium unlocks additional features and removes ads.</li>
+                    <li><strong>Subscription Management:</strong> All subscriptions are managed by Google Play. We do not store or process your payment information.</li>
+                    <li><strong>Canceling Subscription:</strong> You can cancel your subscription at any time via your Google Play account. For instructions, visit <a href="https://support.google.com/googleplay/answer/7018481" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Google Play Help: Cancel, pause, or change a subscription</a>.</li>
+                    <li>After cancellation, you will continue to have premium access until the end of your current billing period.</li>
                 </ul>
 
                 <h2 className="font-bold">4. Termination</h2>
