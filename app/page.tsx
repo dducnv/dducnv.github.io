@@ -49,6 +49,11 @@ export default function Home() {
                 <strong>Tetrafall (Sắp ra mắt)</strong>
               </Link> - Trò chơi xếp hình cổ điển.
             </li>
+            <li className="animate">  
+              <Link href={"/congcu"} target={"_blank"}>
+                <strong>7TH.DEC</strong>
+              </Link> - Công cụ siêu tuyệt vời =))
+            </li>
           </ul>
         </div>
       </div>
