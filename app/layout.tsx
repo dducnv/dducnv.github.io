@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar, Footer, AnimateScript } from "@/components";
+import React from "react";
 
 // Import font IBM Plex Mono
 const ibmPlexMono = IBM_Plex_Mono({
@@ -107,12 +108,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="google-site-verification" content="dRDnqYlJmIUyDeb5jrw2PprrJisSDrAXeU36j1BwzAg" />
+      </head>
       <body className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} font-sans antialiased relative`}>
         <Navbar />
         <AnimateScript/>
         {children}
         <Footer />
-      
       </body>
     </html>
   );
