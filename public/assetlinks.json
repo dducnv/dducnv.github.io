@@ -1,0 +1,30 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.duc_app_lab_ind.cyber_safe",
+      "sha256_cert_fingerprints": [
+        "75:44:82:7B:E2:36:FC:B2:35:D4:60:D1:6F:41:68:A0:95:77:70:D5:C8:6F:57:DE:1D:46:F6:7A:38:F6:10:64",
+        "F9:6B:4A:99:16:73:F6:87:14:EE:F4:ED:5C:BE:C1:21:26:4F:00:32:BE:3E:65:CC:C2:E1:EE:C2:7E:72:8A:B0"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.duc_app_lab_ind.cybersafe_lmt",
+      "sha256_cert_fingerprints": [
+        "2D:FB:BF:8C:7D:FB:1B:69:5A:AC:A9:A5:94:7A:0E:B1:61:7D:A6:FD:4B:03:7F:F0:B6:AF:EF:BC:CF:3A:C1:1B",
+        "75:44:82:7B:E2:36:FC:B2:35:D4:60:D1:6F:41:68:A0:95:77:70:D5:C8:6F:57:DE:1D:46:F6:7A:38:F6:10:64"
+      ]
+    }
+  }
+]
