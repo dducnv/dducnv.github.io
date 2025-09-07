@@ -63,6 +63,9 @@ export default function Home() {
                 <Link href={"/cybersafe/en/privacy-policy"} target={"_blank"} className="text-gray-500 hover:text-blue-600">
                   Privacy Policy
                 </Link>
+                <Link href={"https://github.com/dducnv/cybersafe_pro"} target={"_blank"} className="text-gray-500 hover:text-blue-600">
+                  Open Source
+                </Link>
               </div>
             </div>
 
