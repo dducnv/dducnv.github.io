@@ -1,5 +1,4 @@
-import Link from 'next/link'
-import React from 'react'
+import Link from 'next/link';
 export async function generateMetadata() {
   return {
     title: "CyberSafe - Privacy Policy | Offline Password Manager",
@@ -73,6 +72,29 @@ const page = () => {
           </li>
           <li>
             Encryption and decryption operations are performed locally on your device.
+          </li>
+        </ul>
+        <h3>3.4. Backup & Restore</h3>
+        <ul>
+          <li>
+            <strong>Data Backup:</strong>
+            <p>Backup files are encrypted using the application key combined with your password, ensuring that only you can access and decrypt them.</p>
+          </li>
+          <li>
+            <strong>Data Restore:</strong>
+            <p>To restore, you must provide the password used when creating the backup file. If the password is lost, the backup file cannot be recovered.</p>
+          </li>
+          <li>
+            <strong>Backup to Google Drive:</strong>
+            <p>If you choose to store backups on Google Drive, the files are encrypted with the same mechanism as local backups. The backup files are hidden in Google Drive and can only be opened by the application.</p>
+          </li>
+          <li>
+            <strong>Restore from Google Drive:</strong>
+            <p>Backup files stored in Google Drive must be decrypted with your password, just like local backups. If the password is forgotten, the data cannot be accessed.</p>
+          </li>
+          <li>
+            <strong>Process:</strong>
+            <p>All backup and restore operations must be performed manually by you. The application does not automatically initiate any backup or restore actions without your explicit request.</p>
           </li>
         </ul>
       </div>
