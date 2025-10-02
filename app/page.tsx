@@ -72,7 +72,7 @@ export default function Home() {
             {/* 7TH.DEC */}
             <div className="border-l-2 border-gray-200 pl-4 py-2 animate">
               <div className="flex items-center gap-2 mb-1">
-                <Link href={"/congcu"} target={"_blank"} className="font-medium text-gray-900 hover:text-blue-600">
+                <Link href={"https://tools4u.vercel.app/"} target={"_blank"} className="font-medium text-gray-900 hover:text-blue-600">
                   7TH.DEC
                 </Link>
                 <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Web</span>
