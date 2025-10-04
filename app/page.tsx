@@ -36,11 +36,11 @@ export default function Home() {
           <h2 className="text-lg font-semibold text-gray-900 mb-4 animate" >Dự án</h2>
 
           <div className="space-y-3">
-            {/* PicTrim */}
+            {/* Modipix */}
             <div className="border-l-2 border-gray-200 pl-4 py-2 animate">
               <div className="flex items-center gap-2 mb-1">
                 <Link href={"https://play.google.com/store/apps/details?id=com.duc_app_lab_ind.pic_trim_app"} target={"_blank"} className="font-medium text-gray-900 hover:text-blue-600">
-                  PicTrim
+                  Modipix
                 </Link>
                 <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Flutter</span>
               </div>

@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export async function generateMetadata() {
     return {
-        title: "PicTrim - Privacy Policy",
-        description: "PicTrim does not collect or store any personal information from users. We track the number of image exports users perform through the use of tickets. This data is stored locally on your device and will be lost if you uninstall the app.",
+        title: "Modipix - Privacy Policy",
+        description: "Modipix does not collect or store any personal information from users. We track the number of image exports users perform through the use of tickets. This data is stored locally on your device and will be lost if you uninstall the app.",
     };
 }
 
@@ -17,7 +17,7 @@ const page = () => {
                     <strong>Effective Date:</strong> 22-02-2025 (dd-mm-yyyy)
                 </p>
                 <p className="mt-4">
-                    At <strong>PicTrim</strong>, we value your privacy. This Privacy Policy outlines how we collect, use, and protect your information.
+                    At <strong>Modipix</strong>, we value your privacy. This Privacy Policy outlines how we collect, use, and protect your information.
                 </p>
                 
                 <h2 className="font-bold">1. Information We Collect</h2>
@@ -30,14 +30,14 @@ const page = () => {
                 <h2 className="font-bold">2. How We Use Your Information</h2>
                 <ul className="list-disc pl-10">
                     <li><strong>Image Exports:</strong> Each image export consumes one ticket. Users can earn tickets by watching ads or subscribing to a premium plan through in-app purchases.</li>
-                    <li><strong>In-App Subscriptions:</strong> If you subscribe to PicTrim Premium, your subscription status is managed by Google Play. We do not collect or store your payment information. Subscription data (such as active status) is only used to unlock premium features within the app.</li>
+                    <li><strong>In-App Subscriptions:</strong> If you subscribe to Modipix Premium, your subscription status is managed by Google Play. We do not collect or store your payment information. Subscription data (such as active status) is only used to unlock premium features within the app.</li>
                     <li><strong>Advertising & Analytics:</strong> We may use device identifiers to display relevant advertisements and analyze app performance.</li>
                 </ul>
                 
                 <h2 className="font-bold">3. Subscription Management</h2>
                 <ul className="list-disc pl-10">
                     <li><strong>Subscription Handling:</strong> All subscriptions are handled securely by Google Play. We do not have access to your payment details.</li>
-                    <li><strong>Canceling Subscription:</strong> You can cancel your PicTrim Premium subscription at any time via your Google Play account. For instructions, visit <a href="https://support.google.com/googleplay/answer/7018481" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Google Play Help: Cancel, pause, or change a subscription</a>.</li>
+                    <li><strong>Canceling Subscription:</strong> You can cancel your Modipix Premium subscription at any time via your Google Play account. For instructions, visit <a href="https://support.google.com/googleplay/answer/7018481" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Google Play Help: Cancel, pause, or change a subscription</a>.</li>
                     <li>After cancellation, you will retain premium access until the end of the current billing period.</li>
                 </ul>
                 
@@ -56,7 +56,7 @@ const page = () => {
                 
                 <h2 className="font-bold">5. Data Storage</h2>
                 <ul className="list-disc pl-10">
-                    <li>All data related to image exports and ticket usage is stored locally on your device and is not stored on any servers. If you uninstall the PicTrim app, all stored data on the device will be lost.</li>
+                    <li>All data related to image exports and ticket usage is stored locally on your device and is not stored on any servers. If you uninstall the Modipix app, all stored data on the device will be lost.</li>
                 </ul>
                 
                 <h2 className="font-bold">6. Security</h2>

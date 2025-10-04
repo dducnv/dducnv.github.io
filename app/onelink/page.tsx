@@ -47,8 +47,8 @@ const socialLinks = [
 
 const projects = [
     {
-        logo: "/pictrim.jpg",
-        name: "PicTrim",
+        logo: "/modipix.png",
+        name: "Modipix",
         desc: "Photo editor: crop, round corners, add border, shadow.",
         link: "https://play.google.com/store/apps/details?id=com.duc_app_lab_ind.pic_trim_app",
         linkLabel: "Google Play",

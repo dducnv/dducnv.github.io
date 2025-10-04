@@ -2,8 +2,8 @@ import React from 'react'
 
 export async function generateMetadata() {
     return {
-        title: "PicTrim - Terms of Service",
-        description: "Read the terms of service for using PicTrim, including user responsibilities, limitations, and subscription details.",
+        title: "Modipix - Terms of Service",
+        description: "Read the terms of service for using Modipix, including user responsibilities, limitations, and subscription details.",
     };
 }
 
@@ -16,24 +16,24 @@ const page = () => {
                     <strong>Effective Date:</strong> 22-02-2025 (dd-mm-yyyy)
                 </p>
                 <p className="mt-4">
-                    Welcome to <strong>PicTrim</strong>. By using our application, you agree to the following terms and conditions.
+                    Welcome to <strong>Modipix</strong>. By using our application, you agree to the following terms and conditions.
                 </p>
 
                 <h2 className="font-bold">1. Acceptance of Terms</h2>
                 <ul className="list-disc pl-10">
-                    <li>By accessing or using PicTrim, you agree to comply with and be bound by these Terms of Service.</li>
+                    <li>By accessing or using Modipix, you agree to comply with and be bound by these Terms of Service.</li>
                     <li>If you do not agree with any part of these terms, please do not use the application.</li>
                 </ul>
 
                 <h2 className="font-bold">2. Use of the Service</h2>
                 <ul className="list-disc pl-10">
-                    <li><strong>Personal Use:</strong> PicTrim is intended for personal and non-commercial use only.</li>
+                    <li><strong>Personal Use:</strong> Modipix is intended for personal and non-commercial use only.</li>
                     <li><strong>Prohibited Activities:</strong> Users may not modify, distribute, or reverse-engineer any part of the app.</li>
                 </ul>
 
                 <h2 className="font-bold">3. In-App Subscriptions</h2>
                 <ul className="list-disc pl-10">
-                    <li><strong>Subscription Benefits:</strong> Subscribing to PicTrim Premium unlocks additional features and removes ads.</li>
+                    <li><strong>Subscription Benefits:</strong> Subscribing to Modipix Premium unlocks additional features and removes ads.</li>
                     <li><strong>Subscription Management:</strong> All subscriptions are managed by Google Play. We do not store or process your payment information.</li>
                     <li><strong>Canceling Subscription:</strong> You can cancel your subscription at any time via your Google Play account. For instructions, visit <a href="https://support.google.com/googleplay/answer/7018481" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Google Play Help: Cancel, pause, or change a subscription</a>.</li>
                     <li>After cancellation, you will continue to have premium access until the end of your current billing period.</li>
@@ -41,12 +41,12 @@ const page = () => {
 
                 <h2 className="font-bold">4. Termination</h2>
                 <ul className="list-disc pl-10">
-                    <li>We reserve the right to suspend or terminate your access to PicTrim if you violate these terms.</li>
+                    <li>We reserve the right to suspend or terminate your access to Modipix if you violate these terms.</li>
                 </ul>
 
                 <h2 className="font-bold">5. Limitation of Liability</h2>
                 <ul className="list-disc pl-10">
-                    <li>PicTrim is provided &ldquo;as is&ldquo; without warranties of any kind.</li>
+                    <li>Modipix is provided &ldquo;as is&ldquo; without warranties of any kind.</li>
                     <li>We are not liable for any loss or damages resulting from the use of the application.</li>
                 </ul>
 
