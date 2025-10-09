@@ -1,8 +1,8 @@
+import { AnimateScript, Footer, Navbar } from "@/components";
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
-import "./globals.css";
-import { Navbar, Footer, AnimateScript } from "@/components";
 import React from "react";
+import "./globals.css";
 
 // Import font IBM Plex Mono
 const ibmPlexMono = IBM_Plex_Mono({
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     default: "Nguyễn Văn Đức - Mobile App Developer",
     template: "%s | Nguyễn Văn Đức",
   },
-  description: "Lập trình viên Flutter chuyên phát triển ứng dụng di động Android & iOS. Xem các dự án và blog chia sẻ kinh nghiệm tại đây.",
+  description: "Lập trình viên Flutter chuyên phát triển ứng dụng di động Android & iOS, có 2 sản phẩm nổi bật CyberSafe và Modipix",
   keywords: [
     "Nguyễn Văn Đức",
     "Mobile App Developer",
@@ -38,6 +38,9 @@ export const metadata: Metadata = {
     "Portfolio",
     "Blog lập trình",
     "Flutter App",
+    "Modipix",
+    "CyberSafe",
+    "Duc's Innovation Lab, Ind."
   ],
   authors: [
     {
@@ -55,7 +58,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Nguyễn Văn Đức - Mobile App Developer",
-    description: "Lập trình viên Flutter chuyên về Android & iOS. Xem các dự án và blog tại đây.",
+    description: "Lập trình viên Flutter chuyên phát triển ứng dụng di động Android & iOS, có 2 sản phẩm nổi bật CyberSafe và Modipix",
     url: "https://dducnv.github.io",
     siteName: "dducnv.github.io",
     locale: "vi_VN",
@@ -74,7 +77,7 @@ export const metadata: Metadata = {
     site: "@nvduc_0712",
     creator: "@nvduc_0712",
     title: "Nguyễn Văn Đức - Mobile App Developer",
-    description: "Lập trình viên Flutter chuyên phát triển ứng dụng di động Android & iOS.",
+    description: "Lập trình viên Flutter chuyên phát triển ứng dụng di động Android & iOS, có 2 sản phẩm nổi bật CyberSafe và Modipix",
     images: [
       {
         url: "https://dducnv.github.io/avatar.jpg",
@@ -113,7 +116,7 @@ export default function RootLayout({
       </head>
       <body className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} font-sans antialiased relative`}>
         <Navbar />
-        <AnimateScript/>
+        <AnimateScript />
         {children}
         <Footer />
       </body>
