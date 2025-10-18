@@ -44,7 +44,15 @@ export default function Home() {
                 </Link>
                 <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Flutter</span>
               </div>
-              <p className="text-sm text-gray-600">Ứng dụng chỉnh sửa ảnh với các tính năng làm tròn góc, thêm viền trắng, đổ bóng.</p>
+              <p className="text-sm text-gray-600 mb-2">App chỉnh ảnh aesthetic với 3D LUT, filter film & retro.</p>
+              <div className="flex gap-3 text-xs">
+                <Link href={"/modipix/terms-of-service"} target={"_blank"} className="text-gray-500 hover:text-blue-600">
+                  Terms of Service
+                </Link>
+                <Link href={"/modipix/privacy-policy"} target={"_blank"} className="text-gray-500 hover:text-blue-600">
+                  Privacy Policy
+                </Link>
+              </div>
             </div>
 
             {/* CyberSafe */}
