@@ -1,117 +1,136 @@
 import Image from "next/image";
 import Link from "next/link";
 
+// Nếu bạn đã cài lucide-react thì import, không thì dùng text hoặc svg thường
+// import { Github, Mail } from "lucide-react"; 
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-gray-100">
-      <div className="mx-auto max-w-2xl px-6 py-12 md:py-20">
+    <>
+      <div className="m-auto max-w-3xl p-4 md:p-6 md:pt-12">
 
-        {/* --- HEADER & INTRO --- */}
-        <header className="mb-12 flex flex-col-reverse gap-6 md:flex-row md:items-start md:justify-between">
-          <div className="flex-1">
-            <h1 className="text-3xl font-bold tracking-tight text-black mb-2">
-              Nguyễn Văn Đức
-            </h1>
+        {/* --- HEADER ĐÃ NÂNG CẤP --- */}
+        <div className="flex items-start md:items-center gap-6 mb-10 animate">
+          {/* Avatar: Thêm viền và bóng nhẹ để nổi khối */}
+          <div className="relative shrink-0">
+            <div className="w-20 h-20 md:w-24 md:h-24 relative rounded-full overflow-hidden border-4 border-white shadow-sm ring-1 ring-gray-100">
+              <Image
+                src="/avatar.jpg"
+                className="object-cover"
+                alt="Nguyễn Văn Đức"
+                fill
+                priority
+              />
+            </div>
+            {/* Dot trạng thái (Tuỳ chọn): Báo hiệu đang active */}
+            <div className="absolute bottom-1 right-1 w-5 h-5 bg-green-500 border-4 border-white rounded-full"></div>
+          </div>
 
-            {/* Highlight vị trí Founder */}
-            <p className="text-lg font-medium text-gray-800 mb-1">
-              Founder <Link href="https://play.google.com/store/apps/dev?id=6805050269655315622" target="_blank" className="font-semibold hover:text-gray-900 transition-colors">Duc&apos;s Innovation Lab, Ind.</Link>
-            </p>
-            <p className="text-gray-500 mb-6">Mobile App Developer</p>
+          <div className="flex-1 space-y-2">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 tracking-tight leading-none mb-1">
+                Nguyễn Văn Đức
+              </h1>
+              <p className="text-gray-500 font-medium animate">Mobile App Developer</p>
+            </div>
 
-            <div className="prose prose-gray max-w-none text-gray-600 text-sm leading-relaxed space-y-3">
-              <p>
-                Xin chào! Tôi là Đức, một lập trình viên đam mê công nghệ. Hiện tại, tôi tập trung phát triển ứng dụng di động với Flutter và không ngừng học hỏi. Tôi đã tốt nghiệp FPT Aptech và đang theo học tại PTIT.
-              </p>
-              <p>
-                Ngoài code, tôi là một DIYer, thích chụp ảnh phong cảnh và nghe nhạc Rock.
-              </p>
+            {/* Dòng Founder: Làm thành dạng Badge (Thẻ) */}
+            <div className="flex flex-wrap items-center gap-2 text-sm animate">
+              <span className="text-gray-400">Founder @</span>
+              <Link
+                href="https://play.google.com/store/apps/dev?id=6805050269655315622"
+                target="_blank"
+                className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-blue-50 text-blue-700 font-semibold hover:bg-blue-100 transition-colors border border-blue-100"
+              >
+                Duc&apos;s Innovation Lab, Ind.
+              </Link>
+            </div>
+
+            {/* Social Links: Thêm vào để tăng tính kết nối */}
+            <div className="flex items-center gap-4 text-sm font-medium text-gray-500 pt-1 animate">
+              <Link href="https://github.com/dducnv" target="_blank" className="hover:text-black transition-colors flex items-center gap-1">
+                {/* Icon Github SVG nhỏ gọn */}
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                GitHub
+              </Link>
+              <span className="text-gray-300">|</span>
+              <Link href="mailto:contact.ducnv@gmail.com" className="hover:text-black transition-colors flex items-center gap-1">
+                {/* Icon Mail SVG nhỏ gọn */}
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+                Email Me
+              </Link>
             </div>
           </div>
+        </div>
 
-          <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-full border border-gray-100 bg-gray-50">
-            {/* Bạn nhớ giữ file avatar.jpg trong folder public nhé */}
-            <Image
-              src="/avatar.jpg"
-              alt="Nguyễn Văn Đức"
-              fill
-              className="object-cover"
-              priority
-            />
+        {/* About (Giữ nguyên) */}
+        <div className="mb-8">
+          <div className="prose prose-gray max-w-none text-gray-600 text-sm md:text-base leading-relaxed space-y-3">
+            <p className="animate">
+              Xin chào! Tôi là Đức, một lập trình viên đam mê công nghệ. Hiện tại, tôi tập trung phát triển ứng dụng di động với Flutter và không ngừng học hỏi. Tôi đã tốt nghiệp FPT Aptech và đang theo học tại PTIT.
+            </p>
+            <p className="animate">
+              Ngoài code, tôi là một DIYer, thích chụp ảnh phong cảnh và nghe nhạc Rock.
+            </p>
           </div>
-        </header>
+        </div>
 
-        {/* --- PROJECTS SECTION --- */}
-        <section>
-          <h2 className="text-xl font-bold tracking-tight text-black mb-6">
-            Dự án nổi bật
-          </h2>
+        {/* Projects (Giữ nguyên layout cũ của bạn) */}
+        <div className="mb-8">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4 animate" >Dự án</h2>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-
-            {/* Project 1: Modipix */}
-            <ProjectCard
-              title="Modipix"
-              tag="Flutter"
-              desc="App chỉnh ảnh aesthetic với 3D LUT, filter film & retro."
-              href="https://play.google.com/store/apps/details?id=com.duc_app_lab_ind.pic_trim_app"
-            >
-              <div className="flex gap-3 mt-3 text-xs text-gray-400">
-                <Link href="/modipix/terms-of-service" className="hover:text-gray-900 transition-colors">Terms</Link>
-                <Link href="/modipix/privacy-policy" className="hover:text-gray-900 transition-colors">Privacy</Link>
+          <div className="space-y-3">
+            {/* Modipix */}
+            <div className="border-l-2 border-gray-200 pl-4 py-2 animate group hover:border-blue-500 transition-colors">
+              <div className="flex items-center gap-2 mb-1">
+                <Link href={"https://play.google.com/store/apps/details?id=com.duc_app_lab_ind.pic_trim_app"} target={"_blank"} className="font-medium text-gray-900 hover:text-blue-600">
+                  Modipix
+                </Link>
+                <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Flutter</span>
               </div>
-            </ProjectCard>
-
-            {/* Project 2: CyberSafe */}
-            <ProjectCard
-              title="CyberSafe"
-              tag="Flutter"
-              desc="Trình quản lý mật khẩu ngoại tuyến an toàn và bảo mật."
-              href="/cybersafe"
-            >
-              <div className="flex gap-3 mt-3 text-xs text-gray-400">
-                <Link href="/cybersafe/en/terms-of-service" className="hover:text-gray-900 transition-colors">Terms</Link>
-                <Link href="https://github.com/dducnv/cybersafe_pro" target="_blank" className="hover:text-gray-900 transition-colors">GitHub</Link>
+              <p className="text-sm text-gray-600 mb-2">App chỉnh ảnh aesthetic với 3D LUT, filter film & retro.</p>
+              <div className="flex gap-3 text-xs">
+                <Link href={"/modipix/terms-of-service"} target={"_blank"} className="text-gray-400 hover:text-gray-900">
+                  Terms
+                </Link>
+                <Link href={"/modipix/privacy-policy"} target={"_blank"} className="text-gray-400 hover:text-gray-900">
+                  Privacy
+                </Link>
               </div>
-            </ProjectCard>
+            </div>
 
-            {/* Project 3: 7TH.DEC */}
-            <ProjectCard
-              title="7TH.DEC"
-              tag="Web Tool"
-              desc="Công cụ cá nhân siêu tuyệt vời =))"
-              href="https://tools4u.vercel.app/"
-            />
+            {/* CyberSafe */}
+            <div className="border-l-2 border-gray-200 pl-4 py-2 animate group hover:border-blue-500 transition-colors">
+              <div className="flex items-center gap-2 mb-1">
+                <Link href={"/cybersafe"} target={"_blank"} className="font-medium text-gray-900 hover:text-blue-600">
+                  CyberSafe
+                </Link>
+                <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Flutter</span>
+              </div>
+              <p className="text-sm text-gray-600 mb-2">Trình quản lý mật khẩu ngoại tuyến an toàn và bảo mật.</p>
+              <div className="flex gap-3 text-xs">
+                <Link href={"/cybersafe/en/terms-of-service"} target={"_blank"} className="text-gray-400 hover:text-gray-900">
+                  Terms
+                </Link>
+                <Link href={"https://github.com/dducnv/cybersafe_pro"} target={"_blank"} className="text-gray-400 hover:text-gray-900">
+                  GitHub
+                </Link>
+              </div>
+            </div>
 
+            {/* 7TH.DEC */}
+            <div className="border-l-2 border-gray-200 pl-4 py-2 animate group hover:border-blue-500 transition-colors">
+              <div className="flex items-center gap-2 mb-1">
+                <Link href={"https://tools4u.vercel.app/"} target={"_blank"} className="font-medium text-gray-900 hover:text-blue-600">
+                  7TH.DEC
+                </Link>
+                <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Web</span>
+              </div>
+              <p className="text-sm text-gray-600">Công cụ siêu tuyệt vời =))</p>
+            </div>
           </div>
-        </section>
-
-        {/* --- FOOTER --- */}
-        <footer className="mt-20 border-t border-gray-100 pt-6 text-xs text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Duc&apos;s Innovation Lab, Ind.</p>
-        </footer>
+        </div>
       </div>
-    </main>
-  );
-}
-
-// Component nhỏ để tái sử dụng card dự án cho gọn code
-function ProjectCard({ title, tag, desc, href, children }: { title: string, tag: string, desc: string, href: string, children?: React.ReactNode }) {
-  return (
-    <div className="group relative flex flex-col rounded-lg border border-gray-200 bg-white p-4 transition-all hover:bg-gray-50">
-      <div className="flex items-center justify-between mb-2">
-        <Link href={href} target="_blank" className="font-semibold text-gray-900 after:absolute after:inset-0">
-          {title}
-        </Link>
-        <span className="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-medium text-gray-600">
-          {tag}
-        </span>
-      </div>
-      <p className="text-sm text-gray-500 mb-auto">{desc}</p>
-      {/* Nút con (Links phụ) cần z-index cao hơn để bấm được khi card có after:inset-0 */}
-      <div className="relative z-10">
-        {children}
-      </div>
-    </div>
+    </>
   );
 }
