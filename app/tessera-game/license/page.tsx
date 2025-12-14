@@ -42,14 +42,14 @@ const audioAssets = [
     description: "Fun audio for Color Match Mode.",
   },
   {
-    mode: "Gravity Glitch Mode",
+    mode: "Gravity Flux Mode",
     trackName: "Boss 1 - Looped - Modern",
     author: "BBunker",
     source: "Itch.io",
     sourceUrl: "https://bbunker.itch.io/8-bit-music-anthology-nes-edition",
     license: "Attribution Required",
     licenseUrl: "https://bbunker.itch.io/8-bit-music-anthology-nes-edition",
-    description: "Dramatic track for Gravity Glitch Mode.",
+    description: "Dramatic track for Gravity Flux Mode.",
   },
 ];
 
