@@ -37,9 +37,9 @@ const audioAssets = [
     author: "Snabisch",
     source: "Bandcamp",
     sourceUrl: "https://makeagame.bandcamp.com/track/bad-speech",
-    license: "CC BY 3.0",
-    licenseUrl: "https://creativecommons.org/licenses/by/3.0/",
-    description: "Fun audio for Color Match Mode.",
+    license: "All Rights Reserved",
+    licenseUrl: "https://bandcamp.com/copyright",
+    description: "Used only with explicit permission from the author.",
   },
   {
     mode: "Gravity Flux Mode",
