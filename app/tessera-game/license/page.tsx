@@ -36,9 +36,9 @@ const audioAssets = [
     trackName: "Bad Speech (16-bit Adventure Pack)",
     author: "Snabisch",
     source: "Itch.io", // Đổi sang Itch.io nơi hiển thị rõ License Royalty Free
-    sourceUrl: "https://snabisch.itch.io/16-bit-adventure-music-pack",
+    sourceUrl: "https://makeagame.bandcamp.com/track/bad-speech",
     license: "Royalty Free / CC BY", // Cập nhật lại License chính xác
-    licenseUrl: "https://snabisch.itch.io/16-bit-adventure-music-pack",
+    licenseUrl: "https://makeagame.bandcamp.com/track/bad-speech",
     description: "Background music for Color Match Mode.",
   },
   {
@@ -61,13 +61,13 @@ export const metadata = {
 
 const CreditsPage = () => {
   return (
-    <div className="m-auto max-w-3xl p-4 md:p-6 text-gray-900 bg-white min-h-screen">
+    <div className="m-auto max-w-3xl p-4 md:p-6 text-gray-900">
       {/* Header */}
-      <div className="mb-8 border-b pb-4">
-        <h1 className="text-3xl font-bold text-gray-900 mb-3">
+      <div className="mb-8">
+        <h1 className="text-2xl font-semibold text-gray-900 mb-2">
           Credits & Licenses
         </h1>
-        <p className="text-base text-gray-600 leading-relaxed">
+        <p className="text-sm text-gray-600 leading-relaxed">
           <strong>Tessera: Classic Block Puzzle</strong> is made possible by
           wonderful creators in the community. Below is the attribution for the
           audio assets used in the game.
@@ -75,62 +75,57 @@ const CreditsPage = () => {
       </div>
 
       {/* Assets List */}
-      <div className="space-y-6">
+      <div className="space-y-4">
         {audioAssets.map((asset, index) => (
           <div
             key={index}
-            className="border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow duration-200 bg-gray-50"
+            className="border-l-2 border-gray-200 pl-4 py-3 bg-white"
           >
-            <div className="flex flex-col gap-3">
-              <div className="flex items-start justify-between flex-wrap gap-2">
-                <div>
-                  <h3 className="text-lg font-bold text-gray-900">
-                    {asset.trackName}
-                  </h3>
-                  <p className="text-sm text-gray-700 mt-1">
-                    by <span className="font-semibold text-gray-900">{asset.author}</span>
-                  </p>
-                </div>
-                <span className="text-xs font-medium text-blue-800 bg-blue-100 px-3 py-1 rounded-full whitespace-nowrap h-fit">
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-gra y-500 bg-gray-100 px-2 py-1 rounded">
                   {asset.mode}
                 </span>
+                <h3 className="text-base font-semibold text-gray-900">
+                  {asset.trackName}
+                </h3>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm mt-1">
-                <div className="flex gap-2">
-                  <span className="text-gray-500 font-medium">Source:</span>
+              <p className="text-sm text-gray-700">
+                by <span className="font-medium">{asset.author}</span>
+              </p>
+
+              <div className="flex flex-col gap-1 text-sm text-gray-700">
+                <div className="flex gap-1 flex-wrap">
+                  <span className="text-gray-500">Source:</span>
                   <Link
                     href={asset.sourceUrl}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 hover:underline truncate"
+                    className="text-blue-600 hover:underline"
                   >
                     {asset.source}
                   </Link>
                 </div>
-                <div className="flex gap-2">
-                  <span className="text-gray-500 font-medium">License:</span>
+                <div className="flex gap-1 flex-wrap">
+                  <span className="text-gray-500">License:</span>
                   <Link
                     href={asset.licenseUrl}
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 hover:underline truncate"
+                    className="text-blue-600 hover:underline"
                   >
                     {asset.license}
                   </Link>
                 </div>
               </div>
 
-              <p className="text-sm text-gray-600 italic border-t border-gray-200 pt-3 mt-1">
-                {asset.description}
-              </p>
+              <p className="text-sm text-gray-600">{asset.description}</p>
             </div>
           </div>
         ))}
       </div>
 
       {/* Footer Note */}
-      <div className="mt-10 pt-6 border-t border-gray-200 text-xs text-center text-gray-400">
+      <div className="mt-8 text-xs text-gray-500">
         All assets belong to their respective original owners. Tessera: Classic
         Block Puzzle uses these assets in accordance with their stated licenses.
       </div>
