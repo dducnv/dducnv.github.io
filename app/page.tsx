@@ -1,19 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// Nếu bạn đã cài lucide-react thì import, không thì dùng text hoặc svg thường
-// import { Github, Mail } from "lucide-react"; 
-
 export default function Home() {
   return (
-    <>
-      <div className="m-auto max-w-3xl p-4 md:p-6 md:pt-12">
+    <main className="min-h-screen bg-white text-gray-900 font-sans selection:bg-gray-200 selection:text-black">
+      <div className="m-auto max-w-2xl p-6 md:p-12 lg:pt-20">
 
-        {/* --- HEADER ĐÃ NÂNG CẤP --- */}
-        <div className="flex items-start md:items-center gap-6 mb-10 animate">
-          {/* Avatar: Thêm viền và bóng nhẹ để nổi khối */}
+        {/* --- HEADER --- */}
+        <header className="flex flex-col md:flex-row gap-8 mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <div className="relative shrink-0">
-            <div className="w-20 h-20 md:w-24 md:h-24 relative rounded-full overflow-hidden border-4 border-white shadow-sm ring-1 ring-gray-100">
+            {/* Avatar: Quay về tròn đơn giản, clean nhất */}
+            <div className="w-20 h-20 md:w-24 md:h-24 relative rounded-full overflow-hidden border border-gray-200 shadow-sm">
               <Image
                 src="/avatar.jpg"
                 className="object-cover"
@@ -22,50 +19,41 @@ export default function Home() {
                 priority
               />
             </div>
-            {/* Dot trạng thái (Tuỳ chọn): Báo hiệu đang active */}
-            <div className="absolute bottom-1 right-1 w-5 h-5 bg-green-500 border-4 border-white rounded-full"></div>
           </div>
 
-          <div className="flex-1 space-y-2">
+          <div className="flex-1 space-y-3">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 tracking-tight leading-none mb-1">
+              <h1 className="text-3xl font-bold tracking-tight text-gray-900">
                 Nguyễn Văn Đức
               </h1>
-              <p className="text-gray-500 font-medium animate">Mobile App Developer</p>
+              <p className="text-gray-500 text-lg">
+                Mobile App Developer
+              </p>
             </div>
 
-            {/* Dòng Founder: Làm thành dạng Badge (Thẻ) */}
-            <div className="flex flex-wrap items-center gap-2 text-sm animate">
-              <span className="text-gray-400">Founder @</span>
+            <div className="flex flex-wrap gap-4 text-sm font-medium text-gray-500">
               <Link
                 href="https://play.google.com/store/apps/dev?id=6805050269655315622"
                 target="_blank"
-                className="inline-flex items-center px-2.5 py-0.5 rounded-md bg-blue-50 text-blue-700 font-semibold hover:bg-blue-100 transition-colors border border-blue-100"
+                className="hover:text-black transition-colors underline underline-offset-4"
               >
-                Duc&apos;s Innovation Lab, Ind.
+                Founder @ Duc&apos;s Innovation Lab, Ind.
               </Link>
-            </div>
-
-            {/* Social Links: Thêm vào để tăng tính kết nối */}
-            <div className="flex items-center gap-4 text-sm font-medium text-gray-500 pt-1 animate">
+              <span className="text-gray-300">/</span>
               <Link href="https://github.com/dducnv" target="_blank" className="hover:text-black transition-colors flex items-center gap-1">
-                {/* Icon Github SVG nhỏ gọn */}
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 GitHub
               </Link>
-              <span className="text-gray-300">|</span>
+              <span className="text-gray-300">/</span>
               <Link href="mailto:contact.ducnv@gmail.com" className="hover:text-black transition-colors flex items-center gap-1">
-                {/* Icon Mail SVG nhỏ gọn */}
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
-                Email Me
+                Email
               </Link>
             </div>
           </div>
-        </div>
+        </header>
 
-        {/* About (Giữ nguyên) */}
-        <div className="mb-8">
-          <div className="prose prose-gray max-w-none text-gray-600 text-sm md:text-base leading-relaxed space-y-3">
+        {/* --- ABOUT --- */}
+        <section className="mb-16 animate-in fade-in slide-in-from-bottom-6 duration-700 delay-100">
+          <div className="prose prose-neutral prose-p:text-gray-600 prose-a:no-underline max-w-none">
             <p className="animate">
               Xin chào! Tôi là Đức, một lập trình viên đam mê công nghệ. Hiện tại, tôi tập trung phát triển ứng dụng di động với Flutter và không ngừng học hỏi. Tôi đã tốt nghiệp FPT Aptech và đang theo học tại PTIT.
             </p>
@@ -73,64 +61,98 @@ export default function Home() {
               Ngoài code, tôi là một DIYer, thích chụp ảnh phong cảnh và nghe nhạc Rock.
             </p>
           </div>
-        </div>
+        </section>
 
-        {/* Projects (Giữ nguyên layout cũ của bạn) */}
-        <div className="mb-8">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4 animate" >Dự án</h2>
+        {/* --- PROJECTS --- */}
+        <section className="animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+          <h2 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-6">Projects</h2>
 
-          <div className="space-y-3">
-            {/* Modipix */}
-            <div className="border-l-2 border-gray-200 pl-4 py-2 animate group hover:border-blue-500 transition-colors">
-              <div className="flex items-center gap-2 mb-1">
-                <Link href={"https://play.google.com/store/apps/details?id=com.duc_app_lab_ind.pic_trim_app"} target={"_blank"} className="font-medium text-gray-900 hover:text-blue-600">
-                  Modipix
-                </Link>
-                <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Flutter</span>
+          <div className="grid gap-4">
+
+            {/* === FEATURED PROJECT: TESSERA === */}
+            {/* Design: Nổi bật hơn nhờ background trắng và shadow nhẹ */}
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.duc_innolab.game.tetrafall"
+              target="_blank"
+              className="group relative block p-6 bg-white rounded-xl border border-gray-200 shadow-sm hover:border-gray-400 hover:shadow-md transition-all duration-300"
+            >
+              <div className="flex justify-between items-start mb-3">
+                <div className="flex items-center gap-2">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    Tessera
+                  </h3>
+                  <span className="px-2 py-0.5 rounded-full bg-pink-50 text-pink-700 text-[10px] font-bold uppercase tracking-wide border border-pink-100">
+                    New
+                  </span>
+                </div>
+                {/* Arrow Icon */}
+                <svg className="w-5 h-5 text-gray-300 group-hover:text-gray-900 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17L17 7M17 7H7M17 7V17" /></svg>
               </div>
-              <p className="text-sm text-gray-600 mb-2">App chỉnh ảnh aesthetic với 3D LUT, filter film & retro.</p>
-              <div className="flex gap-3 text-xs">
-                <Link href={"/modipix/terms-of-service"} target={"_blank"} className="text-gray-400 hover:text-gray-900">
-                  Terms
-                </Link>
-                <Link href={"/modipix/privacy-policy"} target={"_blank"} className="text-gray-400 hover:text-gray-900">
-                  Privacy
-                </Link>
+
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Game xếp gạch cổ điển với tư duy thiết kế hiện đại. Tập trung vào trải nghiệm người dùng mượt mà (smooth UX), tối ưu hiệu năng và phong cách visual tối giản.
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                <span className="text-xs font-medium text-gray-500 bg-gray-50 px-2 py-1 rounded border border-gray-100">Flutter</span>
+                <span className="text-xs font-medium text-gray-500 bg-gray-50 px-2 py-1 rounded border border-gray-100">Flame Engine</span>
               </div>
+            </Link>
+
+
+            {/* === OTHER PROJECTS === */}
+            {/* Design: Grid 2 cột cho các dự án phụ để cân đối layout */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+              {/* Modipix */}
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.duc_app_lab_ind.pic_trim_app"
+                target="_blank"
+                className="group p-5 rounded-xl border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 flex flex-col h-full"
+              >
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="font-semibold text-gray-900 group-hover:text-black">Modipix</h3>
+                </div>
+                <p className="text-sm text-gray-500 mb-4 flex-1">
+                  Chỉnh ảnh Aesthetic với bộ lọc 3D LUT và Film simulation.
+                </p>
+                <div className="flex items-center gap-3 text-xs text-gray-400">
+                  <span>Flutter</span>
+                  <span className="w-1 h-1 rounded-full bg-gray-300"></span>
+                  <span>Image Processing</span>
+                </div>
+              </Link>
+
+              {/* CyberSafe */}
+              <Link
+                href="/cybersafe"
+                className="group p-5 rounded-xl border border-gray-200 hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 flex flex-col h-full"
+              >
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="font-semibold text-gray-900 group-hover:text-black">CyberSafe</h3>
+                </div>
+                <p className="text-sm text-gray-500 mb-4 flex-1">
+                  Quản lý mật khẩu Offline-first. Mã hóa AES-256 bảo mật tuyệt đối.
+                </p>
+                <div className="flex items-center gap-3 text-xs text-gray-400">
+                  <span>Security</span>
+                  <span className="w-1 h-1 rounded-full bg-gray-300"></span>
+                  <span>Local Auth</span>
+                </div>
+              </Link>
+
             </div>
 
-            {/* CyberSafe */}
-            <div className="border-l-2 border-gray-200 pl-4 py-2 animate group hover:border-blue-500 transition-colors">
-              <div className="flex items-center gap-2 mb-1">
-                <Link href={"/cybersafe"} target={"_blank"} className="font-medium text-gray-900 hover:text-blue-600">
-                  CyberSafe
-                </Link>
-                <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Flutter</span>
-              </div>
-              <p className="text-sm text-gray-600 mb-2">Trình quản lý mật khẩu ngoại tuyến an toàn và bảo mật.</p>
-              <div className="flex gap-3 text-xs">
-                <Link href={"/cybersafe/en/terms-of-service"} target={"_blank"} className="text-gray-400 hover:text-gray-900">
-                  Terms
-                </Link>
-                <Link href={"https://github.com/dducnv/cybersafe_pro"} target={"_blank"} className="text-gray-400 hover:text-gray-900">
-                  GitHub
-                </Link>
-              </div>
+            {/* Side Projects Link */}
+            <div className="mt-2 text-center md:text-left">
+              <Link href="https://tools4u.vercel.app/" target="_blank" className="text-sm text-gray-400 hover:text-gray-600 transition-colors inline-flex items-center gap-1">
+                Xem thêm các công cụ nhỏ tại 7TH.DEC &rarr;
+              </Link>
             </div>
 
-            {/* 7TH.DEC */}
-            <div className="border-l-2 border-gray-200 pl-4 py-2 animate group hover:border-blue-500 transition-colors">
-              <div className="flex items-center gap-2 mb-1">
-                <Link href={"https://tools4u.vercel.app/"} target={"_blank"} className="font-medium text-gray-900 hover:text-blue-600">
-                  7TH.DEC
-                </Link>
-                <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors">Web</span>
-              </div>
-              <p className="text-sm text-gray-600">Công cụ siêu tuyệt vời =))</p>
-            </div>
           </div>
-        </div>
+        </section>
       </div>
-    </>
+    </main>
   );
 }
