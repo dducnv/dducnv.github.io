@@ -90,7 +90,16 @@ const page = () => {
             >
               Google Play Services
             </Link>{" "}
-            – for game updates and distribution.
+            (Android) – for game updates and distribution on Android devices.
+          </li>
+          <li>
+            <Link
+              href="https://www.apple.com/privacy/"
+              className="text-blue-600 underline"
+            >
+              Apple App Store
+            </Link>{" "}
+            (iOS) – for game updates and distribution on iOS devices.
           </li>
           <li>
             <Link
