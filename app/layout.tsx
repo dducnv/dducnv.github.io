@@ -23,10 +23,10 @@ const ibmPlexSans = IBM_Plex_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://dducnv.github.io"),
   title: {
-    default: "Nguyễn Văn Đức - Mobile App Developer",
+    default: "Nguyễn Văn Đức - Software Engineer Portfolio",
     template: "%s | Nguyễn Văn Đức",
   },
-  description: "Lập trình viên Flutter chuyên phát triển ứng dụng di động Android & iOS, có 2 sản phẩm nổi bật CyberSafe và Modipix",
+  description: "Lập trình viên Flutter chuyên phát triển ứng dụng di động Android & iOS, có 3 sản phẩm nổi bật, Tessera Arcade, CyberSafe và Modipix",
   keywords: [
     "Nguyễn Văn Đức",
     "Mobile App Developer",
@@ -40,7 +40,8 @@ export const metadata: Metadata = {
     "Flutter App",
     "Modipix",
     "CyberSafe",
-    "Duc's Innovation Lab, Ind."
+    "Duc's Innovation Lab, Ind.",
+    "Software Engineer Portfolio"
   ],
   authors: [
     {
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Nguyễn Văn Đức - Mobile App Developer",
+    title: "Nguyễn Văn Đức - Software Engineer Portfolio",
     description: "Lập trình viên Flutter chuyên phát triển ứng dụng di động Android & iOS, có 2 sản phẩm nổi bật CyberSafe và Modipix",
     url: "https://dducnv.github.io",
     siteName: "dducnv.github.io",
@@ -76,7 +77,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@nvduc_0712",
     creator: "@nvduc_0712",
-    title: "Nguyễn Văn Đức - Mobile App Developer",
+    title: "Nguyễn Văn Đức - Software Engineer Portfolio",
     description: "Lập trình viên Flutter chuyên phát triển ứng dụng di động Android & iOS, có 2 sản phẩm nổi bật CyberSafe và Modipix",
     images: [
       {
