@@ -9,7 +9,7 @@ export default function Home() {
       <div className="m-auto max-w-3xl p-6 md:p-0 lg:pt-10">
 
         {/* --- HEADER --- */}
-        <header className="mb-10 animate-fade-in-up">
+        <header className=" mb-14 animate-fade-in-up">
           <div className="flex flex-col md:flex-row gap-8 items-start animate">
             {/* Avatar */}
             <div className="w-20 h-20  md:w-24 md:h-24 shrink-0 rounded-full overflow-hidden bg-gray-100 border border-gray-200">
@@ -68,6 +68,7 @@ export default function Home() {
                   <a href="#" className="hover:text-gray-400 cursor-not-allowed transition-colors flex items-center gap-1 group">
                     <img src="/icon/apple_logo.svg" alt="" className='w-5 h-5 mr-1 object-contain' />
                     App Store
+                    <span className="text-[10px] bg-gray-200 text-gray-500 px-1.5 py-0.5 rounded">Soon</span>
                   </a>
                 </div>
               </div>
@@ -88,7 +89,7 @@ export default function Home() {
 
         {/* --- PROJECTS --- */}
         <section className="animate-fade-in-up ">
-          <h2 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-8 border-b border-gray-100 pb-2 animate">
+          <h2 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 border-b border-gray-100 pb-2 animate">
             Projects
           </h2>
 
@@ -111,23 +112,24 @@ export default function Home() {
               </div>
 
               {/* Minimal Store Buttons for this specific app */}
-              <div className="flex gap-3 animate ">
+              <div className="flex gap-3 mt-4">
+                {/* Google Play - Active */}
                 <a
                   href="https://play.google.com/store/apps/details?id=com.duc_innolab.game.tetrafall"
                   target="_blank"
-                  className="px-4 py-2 bg-gray-900 text-white text-xs font-semibold rounded-lg hover:bg-black transition-colors flex items-center gap-2"
+                  className="group px-4 py-2 bg-transparent border border-gray-300 text-gray-700 text-xs font-medium rounded-full 
+               hover:bg-black hover:text-white hover:border-black transition-all duration-300 flex items-center gap-2"
                 >
-                  <span>Google Play</span>
-                  <ArrowUpRight size={12} className="opacity-70" />
+                  {/* Bạn có thể thay text này bằng Icon Android nếu muốn */}
+                  <span>Get on Google Play</span>
+                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
                 </a>
 
-                <a
-                  href="#"
-                  className="px-4 py-2 border border-gray-200 text-gray-400 text-xs font-semibold rounded-lg cursor-not-allowed flex items-center gap-2"
-                >
+                {/* App Store - Coming Soon State */}
+                <div className="px-4 py-2 bg-gray-50 border border-gray-100 text-gray-400 text-xs font-medium rounded-full flex items-center gap-2 cursor-default select-none">
                   <span>App Store</span>
-                  <ArrowUpRight size={12} className="opacity-70" />
-                </a>
+                  <span className="text-[10px] bg-gray-200 text-gray-500 px-1.5 py-0.5 rounded">Soon</span>
+                </div>
               </div>
             </div>
 
