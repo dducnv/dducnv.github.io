@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { ArrowUpRight, Terminal } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -103,6 +104,7 @@ export default function Home() {
               <p className="text-gray-600 mb-2 leading-relaxed max-w-xl">
                 Dự án game Arcade lấy cảm hứng từ xếp gạch cổ điển, mở rộng với nhiều chế độ chơi sáng tạo. Mục tiêu xây dựng một tuyển tập game đa dạng dựa trên cơ chế tương tác với các khối (blocks).
               </p>
+
               <div className="flex gap-2 text-[10px] text-gray-400 uppercase font-medium tracking-wide mb-4">
                 <span>Flutter</span>
                 <span>/</span>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const audioAssets = [
   {
-    mode: "Classic Mode",
+    modes: ["Classic Mode"],
     trackName: "Title Theme (8-Bit Style)",
     author: "Kat",
     source: "OpenGameArt.org",
@@ -12,7 +12,7 @@ const audioAssets = [
     description: "Main theme for Classic Mode.",
   },
   {
-    mode: "Survival Mode",
+    modes: ["Survival"],
     trackName: "Menu Theme (Free Retro Game Music Pack)",
     author: "Olivia Cirilla",
     source: "Itch.io",
@@ -22,7 +22,7 @@ const audioAssets = [
     description: "Classic sounds inspired by the golden age of gaming. Visit: oliviacirilla.com",
   },
   {
-    mode: "Time Attack Mode",
+    modes: ["Time Attack"],
     trackName: "Flat (8-bit Gaming Music) INSTRUMENTAL",
     author: "SoundUniverseStudio (Pixabay)",
     source: "Pixabay",
@@ -32,17 +32,17 @@ const audioAssets = [
     description: "Fast-paced track for Time Attack Mode.",
   },
   {
-    mode: "Color Match Mode",
+    modes: ["Color Match", "Block Blast"],
     trackName: "Bad Speech (16-bit Adventure Pack)",
     author: "Snabisch",
     source: "Itch.io", // Đổi sang Itch.io nơi hiển thị rõ License Royalty Free
     sourceUrl: "https://makeagame.bandcamp.com/track/bad-speech",
     license: "Royalty Free / CC BY", // Cập nhật lại License chính xác
     licenseUrl: "https://makeagame.bandcamp.com/track/bad-speech",
-    description: "Background music for Color Match Mode.",
+    description: "Background music for Color Match Mode and Block Blast Mode.",
   },
   {
-    mode: "Gravity Flux Mode",
+    modes: ["Gravity Flux"],
     trackName: "Boss 1 - Looped - Modern", // Hoặc tên file cụ thể bạn dùng
     author: "BBunker",
     source: "Itch.io",
@@ -82,13 +82,16 @@ const CreditsPage = () => {
             className="border-l-2 border-gray-200 pl-4 py-3 bg-white"
           >
             <div className="flex flex-col gap-2">
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-gra y-500 bg-gray-100 px-2 py-1 rounded">
-                  {asset.mode}
-                </span>
+              <div className=" items-center gap-2">
+
                 <h3 className="text-base font-semibold text-gray-900">
                   {asset.trackName}
                 </h3>
+                {asset.modes.map((mode, index) => (
+                  <span key={index} className="text-xs text-gra y-500 bg-gray-100 px-2 py-1 rounded mt-2 mb-3 mr-2">
+                    {mode}
+                  </span>
+                ))}
               </div>
 
               <p className="text-sm text-gray-700">
