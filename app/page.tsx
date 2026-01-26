@@ -1,7 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import { ArrowUpRight, Terminal } from 'lucide-react';
-import Link from 'next/link';
 
 export default function Home() {
   return (
