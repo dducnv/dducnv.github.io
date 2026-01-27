@@ -1,6 +1,7 @@
 import { AnimateScript, Footer, Navbar } from "@/components";
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import React from "react";
 import "./globals.css";
 
@@ -120,6 +121,7 @@ export default function RootLayout({
         <AnimateScript />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
