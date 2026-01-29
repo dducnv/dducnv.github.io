@@ -65,10 +65,9 @@ export default function Home() {
                     Google Play
                   </a>
                   <span className="text-gray-300">/</span>
-                  <a href="#" className="hover:text-gray-400 cursor-not-allowed transition-colors flex items-center gap-1 group">
+                  <a href="https://apps.apple.com/vn/app/tessera-block-puzzle-game/id6758011076" className="hover:text-gray-400 cursor-not-allowed transition-colors flex items-center gap-1 group">
                     <img src="/icon/apple_logo.svg" alt="" className='w-5 h-5 mr-1 object-contain' />
                     App Store
-                    <span className="text-[10px] bg-gray-200 text-gray-500 px-1.5 py-0.5 rounded">Soon</span>
                   </a>
                 </div>
               </div>
@@ -127,10 +126,17 @@ export default function Home() {
                 </a>
 
                 {/* App Store - Coming Soon State */}
-                <div className="px-4 py-2 bg-gray-50 border border-gray-100 text-gray-400 text-xs font-medium rounded-full flex items-center gap-2 cursor-default select-none">
-                  <span>App Store</span>
-                  <span className="text-[10px] bg-gray-200 text-gray-500 px-1.5 py-0.5 rounded">Soon</span>
-                </div>
+                <a
+                  href="https://apps.apple.com/vn/app/tessera-block-puzzle-game/id6758011076"
+                  target="_blank"
+                  className="group px-4 py-2 bg-transparent border border-gray-300 text-gray-700 text-xs font-medium rounded-full 
+               hover:bg-black hover:text-white hover:border-black transition-all duration-300 flex items-center gap-2"
+                >
+                  {/* Bạn có thể thay text này bằng Icon Android nếu muốn */}
+                  <span>Get on App Store</span>
+                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+                </a>
+
               </div>
             </div>
 
