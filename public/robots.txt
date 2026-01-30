@@ -1,3 +1,2 @@
 User-agent: Google-adstxt
-
 Disallow:
