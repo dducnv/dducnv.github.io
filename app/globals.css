@@ -49,3 +49,18 @@ body {
 .animate.show {
   @apply opacity-100 translate-y-0;
 }
+
+/* Tessera Game Animations */
+@keyframes grid-move {
+  0% { transform: rotateX(60deg) scale(2) translateY(0); }
+  100% { transform: rotateX(60deg) scale(2) translateY(40px); }
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 1; }
+}
+
+.animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+}
