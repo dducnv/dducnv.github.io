@@ -32,7 +32,7 @@ const audioAssets = [
     description: "Fast-paced track for Time Attack Mode.",
   },
   {
-    modes: ["Color Match", "Block Blast"],
+    modes: ["Color Match", "Block Blast", "Block Slide"],
     trackName: "Bad Speech (16-bit Adventure Pack)",
     author: "Snabisch",
     source: "Itch.io", // Đổi sang Itch.io nơi hiển thị rõ License Royalty Free
