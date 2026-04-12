@@ -143,7 +143,7 @@ export default function Home() {
 
             {/* === MODIPIX === */}
             <a
-              href="https://play.google.com/store/apps/details?id=com.duc_app_lab_ind.pic_trim_app"
+              href="/modipix"
               target="_blank"
               className="group block animate"
             >
