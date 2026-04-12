@@ -65,7 +65,7 @@ export default function Home() {
                     Google Play
                   </a>
                   <span className="text-gray-300">/</span>
-                  <a href="https://apps.apple.com/vn/app/tessera-block-puzzle-game/id6758011076" target="_blank" className="hover:text-gray-600 transition-colors flex items-center gap-1 group">
+                  <a href="https://apps.apple.com/vn/developer/duc-nguyen/id1870248816" target="_blank" className="hover:text-gray-600 transition-colors flex items-center gap-1 group">
                     <img src="/icon/apple_logo.svg" alt="" className='w-5 h-5 mr-1 object-contain' />
                     App Store
                   </a>
