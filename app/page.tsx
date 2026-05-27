@@ -138,7 +138,7 @@ export default function Home() {
             </a>
 
             {/* Project 04: Battleship */}
-            <a href="https://github.com/dducnv/battleship" target="_blank" className="group p-4 md:p-8 flex flex-col justify-between hover:bg-black hover:text-white transition-colors duration-300">
+            <div className="group border-t border-black p-4 md:p-8 flex flex-col justify-between hover:bg-black hover:text-white transition-colors duration-300">
               <div>
                 <span className="text-4xl md:text-6xl font-black tracking-tighter mb-4 block group-hover:text-[#FF0000]">04</span>
                 <h3 className="text-2xl md:text-4xl font-black uppercase leading-none tracking-tighter mb-4 md:mb-6">Battleship</h3>
@@ -153,9 +153,12 @@ export default function Home() {
                     <span key={tag} className="text-[9px] md:text-[10px] font-mono tracking-widest uppercase border border-current px-2 py-1">{tag}</span>
                   ))}
                 </div>
-                <span className="flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-tighter border-b border-current pb-1 w-fit transition-all group-hover:text-[#FF0000]">Join Battle <ArrowUpRight size={14}/></span>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a href="https://battleship-p2p.vercel.app" target="_blank" className="flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-tighter border-b border-current pb-1 w-fit transition-all hover:text-[#FF0000]">Join Battle <ArrowUpRight size={14}/></a>
+                  <a href="https://github.com/dducnv/battleship" target="_blank" className="flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-tighter border-b border-current pb-1 w-fit transition-all hover:text-[#FF0000]">View Source <ArrowUpRight size={14}/></a>
+                </div>
               </div>
-            </a>
+            </div>
           </div>
         </section>
       </main>
