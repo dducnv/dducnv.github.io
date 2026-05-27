@@ -1,55 +1,21 @@
-import { AnimateScript, Footer, Navbar } from "@/components";
-import type { Metadata } from "next";
-import { IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
 import React from "react";
 import "./globals.css";
 
-// Import font IBM Plex Mono
-const ibmPlexMono = IBM_Plex_Mono({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-  variable: "--font-ibm-mono",
+  variable: "--font-inter",
   display: "swap",
 });
 
-// Import font IBM Plex Sans
-const ibmPlexSans = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
-  variable: "--font-ibm-sans",
-  display: "swap",
-});
-
-export const metadata: Metadata = {
+export const metadata = {
   metadataBase: new URL("https://dducnv.github.io"),
   title: {
     default: "Nguyễn Văn Đức - Software Engineer Portfolio",
     template: "%s | Nguyễn Văn Đức",
   },
   description: "Lập trình viên Flutter chuyên phát triển ứng dụng di động Android & iOS, có 3 sản phẩm nổi bật, Tessera Arcade, CyberSafe và Modipix",
-  keywords: [
-    "Nguyễn Văn Đức",
-    "Mobile App Developer",
-    "Flutter Developer",
-    "Dart",
-    "Android",
-    "iOS",
-    "Ứng dụng di động",
-    "Portfolio",
-    "Blog lập trình",
-    "Flutter App",
-    "Modipix",
-    "CyberSafe",
-    "Duc's Innovation Lab, Ind.",
-    "Software Engineer Portfolio"
-  ],
-  authors: [
-    {
-      name: "Nguyễn Văn Đức",
-      url: "https://dducnv.github.io",
-    },
-  ],
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -57,52 +23,6 @@ export const metadata: Metadata = {
       { url: "/favicon-32x32.png", sizes: "32x32" },
       { url: "/favicon-96x96.png", sizes: "96x96" },
     ],
-  },
-  openGraph: {
-    title: "Nguyễn Văn Đức - Software Engineer Portfolio",
-    description: "Lập trình viên Flutter chuyên phát triển ứng dụng di động Android & iOS, có 2 sản phẩm nổi bật CyberSafe và Modipix",
-    url: "https://dducnv.github.io",
-    siteName: "dducnv.github.io",
-    locale: "vi_VN",
-    type: "website",
-    images: [
-      {
-        url: "https://dducnv.github.io/avatar.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Nguyễn Văn Đức",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@nvduc_0712",
-    creator: "@nvduc_0712",
-    title: "Nguyễn Văn Đức - Software Engineer Portfolio",
-    description: "Lập trình viên Flutter chuyên phát triển ứng dụng di động Android & iOS, có 2 sản phẩm nổi bật CyberSafe và Modipix",
-    images: [
-      {
-        url: "https://dducnv.github.io/avatar.jpg",
-        alt: "Nguyễn Văn Đức",
-      },
-    ],
-  },
-  verification: {
-    google: "esj5hkXZdliPhTYEN29wV6Lf381DaHrEXXzzrytQu2k",
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-video-preview": -1,
-      "max-snippet": -1,
-    },
-  },
-  alternates: {
-    canonical: "https://dducnv.github.io",
   },
 };
 
@@ -116,11 +36,17 @@ export default function RootLayout({
       <head>
         <meta name="google-site-verification" content="dRDnqYlJmIUyDeb5jrw2PprrJisSDrAXeU36j1BwzAg" />
       </head>
-      <body className={`${ibmPlexMono.variable} ${ibmPlexSans.variable} font-sans antialiased relative`}>
-        <Navbar />
-        <AnimateScript />
-        {children}
-        <Footer />
+      <body className={`${inter.variable} font-sans antialiased bg-[#FFFFFF] text-[#000000] selection:bg-[#FF0000] selection:text-white`}>
+        {/* --- SYSTEM GRID OVERLAY --- */}
+        <div className="fixed inset-0 pointer-events-none grid grid-cols-12 gap-0 px-4 md:px-8 opacity-[0.03] z-0">
+          {[...Array(12)].map((_, i) => (
+            <div key={i} className="border-l border-black h-full last:border-r" />
+          ))}
+        </div>
+        
+        <div className="relative z-10">
+          {children}
+        </div>
         <Analytics />
       </body>
     </html>

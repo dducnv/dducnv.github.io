@@ -1,200 +1,166 @@
 import React from 'react';
 import Image from 'next/image';
-import { ArrowUpRight, Terminal } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
+import { Navbar, Footer } from '@/components';
 
 export default function Home() {
   return (
-    <div className="min-h-screen text-gray-900 font-sans selection:bg-gray-200 selection:text-black">
-
-      <div className="m-auto max-w-3xl p-6 md:p-0 lg:pt-10">
-
-        {/* --- HEADER --- */}
-        <header className=" mb-14 animate-fade-in-up">
-          <div className="flex flex-col md:flex-row gap-8 items-start animate">
-            {/* Avatar */}
-            <div className="w-20 h-20  md:w-24 md:h-24 shrink-0 rounded-full overflow-hidden bg-gray-100 border border-gray-200">
-              <div className="w-20 h-20 md:w-24 md:h-24 relative rounded-full overflow-hidden border border-gray-200 shadow-sm">
-                <Image
-                  src="/avatar.jpg"
-                  className="object-cover"
-                  alt="Nguyễn Văn Đức"
-                  fill
-                  priority
-                />
-              </div>
-            </div>
-
-            <div className="flex-1 space-y-4">
+    <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
+      <Navbar />
+      
+      <main className="flex-grow w-full">
+        {/* --- SECTION 1: HERO & IDENTITY --- */}
+        <section className="relative z-10 grid grid-cols-1 md:grid-cols-12 border-b border-black w-full">
+          {/* Manifesto */}
+          <div className="md:col-span-8 p-4 md:p-8 border-b md:border-b-0 md:border-r border-black overflow-hidden">
+            <h1 className="text-[clamp(2.5rem,12vw,8rem)] font-black uppercase leading-[0.85] md:leading-[0.82] tracking-[-0.04em] md:tracking-[-0.05em] mb-8 md:mb-12">
+              Indie <br /> Developer <br />
+              <span className="text-[#FF0000]">//</span> Building <br />
+              Digital <br /> Architecture.
+            </h1>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-6 md:pt-8 border-t border-black">
               <div>
-                <h1 className="text-3xl font-bold tracking-tight text-gray-900">
-                  Nguyễn Văn Đức
-                </h1>
-                <p className="text-gray-500 text-lg">
-                  Mobile App Developer
+                <p className="text-base md:text-lg font-bold uppercase leading-tight mb-3 md:mb-4 tracking-tighter">Mission Statement</p>
+                <p className="text-gray-600 text-sm max-w-sm leading-relaxed text-left">
+                  Xin chào! Tôi là Đức. Hiện tại, tôi là lập trình viên phát triển ứng dụng di động chuyên về Flutter.
+                  Thiết kế của tôi tập trung vào sự tối giản và hiệu năng cao.
                 </p>
-                <div className="flex flex-wrap items-center gap-3 text-sm font-medium text-gray-500 mt-2">
-                  <a href="https://linkedin.com/in/ducnv0712" target="_blank" className="hover:text-black transition-colors flex items-center gap-1 group">
-                    LinkedIn
-                  </a>
-                  <span className="text-gray-300">/</span>
-                  <a href="https://github.com/dducnv" target="_blank" className="hover:text-black transition-colors flex items-center gap-1 group">
-                    GitHub
-                  </a>
-                  <span className="text-gray-300">/</span>
-                  <a href="mailto:contact.ducnv@gmail.com" className="hover:text-black transition-colors flex items-center gap-1 group">
-                    Email
-                  </a>
-                </div>
               </div>
-
-
+              <div className="space-y-2">
+                <span className="block text-[10px] md:text-[11px] font-mono tracking-[0.2em] uppercase text-gray-400">Core Expertise</span>
+                <ul className="text-xs md:text-sm font-bold uppercase tracking-tight grid grid-cols-2 sm:grid-cols-1 gap-1">
+                  <li>Flutter / Dart</li>
+                  <li>Next.js / TS</li>
+                  <li>Flame Engine</li>
+                  <li>Security</li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div className='mt-3'>
-            {/* Links Group: Social & Store Profiles */}
-            <div className="flex flex-col gap-2 pt-2 animate mb-4">
-              {/* Row 1: Social */}
 
-
-              {/* Row 2: Developer Profiles (All Apps) */}
-              <div className="text-sm font-medium text-gray-500 mt-3 animate">
-                <span className="text-gray-700">Indie Developer</span>
-                <div className="flex flex-wrap items-center gap-2 mt-2">
-                  <a href="https://play.google.com/store/apps/dev?id=6805050269655315622" target="_blank" className="hover:text-gray-600 transition-colors flex items-center gap-1 group">
-                    <img src="/icon/android_logo.svg" alt="" className='w-6 h-6 mr-1' />
-                    Google Play
-                  </a>
-                  <span className="text-gray-300">/</span>
-                  <a href="https://apps.apple.com/vn/developer/duc-nguyen/id1870248816" target="_blank" className="hover:text-gray-600 transition-colors flex items-center gap-1 group">
-                    <img src="/icon/apple_logo.svg" alt="" className='w-5 h-5 mr-1 object-contain' />
-                    App Store
-                  </a>
+          {/* Identity Metadata */}
+          <div className="md:col-span-4 p-4 md:p-8 flex flex-col justify-between space-y-8 md:space-y-12 overflow-hidden">
+            <div className="relative aspect-square w-full max-w-[280px] sm:max-w-[320px] md:max-w-none mx-auto md:mx-0 bg-gray-100 grayscale hover:grayscale-0 transition-all duration-500 overflow-hidden border border-black">
+              <Image
+                src="/avatar.jpg"
+                alt="Nguyễn Văn Đức"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="space-y-4">
+              <div className="border-t border-black pt-4">
+                <span className="block text-[10px] md:text-[11px] font-mono tracking-[0.2em] uppercase text-gray-400 mb-1">Identity</span>
+                <p className="text-xl md:text-2xl font-black uppercase leading-none tracking-tight">Nguyễn Văn Đức</p>
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-1 gap-4">
+                <div className="border-t border-black pt-4 md:border-none md:pt-0">
+                  <span className="block text-[10px] md:text-[11px] font-mono tracking-[0.2em] uppercase text-gray-400 mb-1">System 2026</span>
+                  <p className="text-xs md:text-sm font-bold uppercase leading-none">Vietnam</p>
+                </div>
+                <div className="border-t border-black pt-4 md:border-none md:pt-0">
+                  <span className="block text-[10px] md:text-[11px] font-mono tracking-[0.2em] uppercase text-gray-400 mb-1">Experience</span>
+                  <p className="text-xs md:text-sm font-bold uppercase leading-none">02 Years</p>
                 </div>
               </div>
-            </div>
-            {/* Bio */}
-            <div className="text-gray-600 leading-relaxed text-[15px] animate">
-              <p>
-                Xin chào! Tôi là Đức. Hiện tại, tôi là lập trình viên phát triển ứng dụng di động chuyên về Flutter.
-                Tôi đã tốt nghiệp FPT Aptech và tiếp tục theo học tại PTIT.
-                Ngoài code, tôi là một DIYer tìm hiểu về các thiết bị điện tử, thích chụp ảnh phong cảnh và nghe nhạc Rock.
-              </p>
-            </div>
-
-
-
-          </div>
-        </header>
-
-        {/* --- PROJECTS --- */}
-        <section className="animate-fade-in-up ">
-          <h2 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4 border-b border-gray-100 pb-2 animate">
-            Projects
-          </h2>
-
-          <div className="space-y-10">
-
-            {/* === TESSERA (Main) === */}
-            <div className="group animate">
-              <h3 className="text-xl font-bold text-gray-900">
-                Tessera Arcade
-              </h3>
-              <p className="text-gray-600 mb-2 leading-relaxed max-w-xl">
-                Dự án game Arcade lấy cảm hứng từ xếp gạch cổ điển, mở rộng với nhiều chế độ chơi sáng tạo. Mục tiêu xây dựng một tuyển tập game đa dạng dựa trên cơ chế tương tác với các khối (blocks).
-              </p>
-
-              <div className="flex gap-2 text-[10px] text-gray-400 uppercase font-medium tracking-wide mb-4">
-                <span>Flutter</span>
-                <span>/</span>
-                <span>Flame</span>
-                <span>/</span>
-                <span>Game</span>
-              </div>
-
-              {/* Minimal Store Buttons for this specific app */}
-              <div className="flex gap-3 mt-4">
-                {/* Google Play - Active */}
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.duc_innolab.game.tetrafall"
-                  target="_blank"
-                  className="group px-4 py-2 bg-transparent border border-gray-300 text-gray-700 text-xs font-medium rounded-full 
-               hover:bg-black hover:text-white hover:border-black transition-all duration-300 flex items-center gap-2"
-                >
-                  {/* Bạn có thể thay text này bằng Icon Android nếu muốn */}
-                  <span>Get on Google Play</span>
-                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                </a>
-
-                {/* App Store - Coming Soon State */}
-                <a
-                  href="https://apps.apple.com/vn/app/tessera-block-puzzle-game/id6758011076"
-                  target="_blank"
-                  className="group px-4 py-2 bg-transparent border border-gray-300 text-gray-700 text-xs font-medium rounded-full 
-               hover:bg-black hover:text-white hover:border-black transition-all duration-300 flex items-center gap-2"
-                >
-                  {/* Bạn có thể thay text này bằng Icon Android nếu muốn */}
-                  <span>Get on App Store</span>
-                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-                </a>
-
-              </div>
-            </div>
-
-
-            {/* === MODIPIX === */}
-            <a
-              href="/modipix"
-              target="_blank"
-              className="group block animate"
-            >
-              <div className="flex items-center gap-2 mb-1">
-                <h3 className="text-lg font-bold text-gray-900 group-hover:text-gray-600 transition-colors">
-                  Modipix
-                </h3>
-                <ArrowUpRight size={18} className="text-gray-300 group-hover:text-gray-600 transition-colors group-hover:-translate-y-0.5 group-hover:translate-x-0.5 duration-200" />
-              </div>
-              <p className="text-gray-600 text-sm mb-2">
-                Công cụ biên tập ảnh di động mạnh mẽ, nổi bật với khả năng xử lý LUT (Look-Up Table) để chỉnh màu chuyên nghiệp. Ứng dụng cung cấp bộ công cụ tùy biến bố cục linh hoạt: bo góc, tạo khung watermark tự động và mở rộng viền ảnh thông minh.              </p>
-              <div className="flex gap-2 text-[10px] text-gray-400 uppercase font-medium tracking-wide">
-                <span>Flutter</span>
-                <span>/</span>
-                <span>Image Processing</span>
-              </div>
-            </a>
-
-            {/* === CYBERSAFE === */}
-            <a
-              href="/cybersafe"
-              className="group block animate"
-            >
-              <div className="flex items-center gap-2 mb-1">
-                <h3 className="text-lg font-bold text-gray-900 group-hover:text-gray-600 transition-colors">
-                  CyberSafe
-                </h3>
-                <ArrowUpRight size={18} className="text-gray-300 group-hover:text-gray-600 transition-colors group-hover:-translate-y-0.5 group-hover:translate-x-0.5 duration-200" />
-              </div>
-              <p className="text-gray-600 text-sm mb-2">
-                Trình quản lý mật khẩu Offline-first an toàn tuyệt đối. Sử dụng SQLite và SQLCipher để mã hóa dữ liệu cục bộ (AES-256). Tăng cường bảo mật khóa với thuật toán Argon2id, loại bỏ hoàn toàn phụ thuộc vào máy chủ.
-              </p>
-              <div className="flex gap-2 text-[10px] text-gray-400 uppercase font-medium tracking-wide">
-                <span>Flutter</span>
-                <span>/</span>
-                <span>Security</span>
-                <span>/</span>
-                <span>Local Auth</span>
-              </div>
-            </a>
-            <div className="mt-8 text-center animate">
-              <a href="https://tools4u.vercel.app/" target="_blank" className="inline-flex items-center gap-2 px-4 py-2 text-gray-500 text-sm font-medium  hover:text-gray-900 transition-all">
-                <Terminal size={14} />
-                <span>Xem thêm các công cụ nhỏ tại 7TH.DEC</span>
-                <ArrowUpRight size={14} />
-              </a>
             </div>
           </div>
         </section>
 
-      </div>
+        {/* --- SECTION 2: SELECTED WORKS --- */}
+        <section className="relative z-10 border-b border-black w-full overflow-hidden">
+          <div className="p-4 md:p-8 border-b border-black">
+            <span className="text-[10px] md:text-[11px] font-mono tracking-[0.2em] uppercase text-[#FF0000]">Index 00 — Selected Works</span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            {/* Project 01: Tessera */}
+            <div className="group border-b border-black md:border-r p-4 md:p-8 flex flex-col justify-between hover:bg-black hover:text-white transition-colors duration-300">
+              <div>
+                <span className="text-4xl md:text-6xl font-black tracking-tighter mb-4 block group-hover:text-[#FF0000]">01</span>
+                <h3 className="text-2xl md:text-4xl font-black uppercase leading-none tracking-tighter mb-4 md:mb-6">Tessera Arcade</h3>
+                <p className="text-xs md:text-sm leading-relaxed mb-6 md:mb-8 max-w-md opacity-80">
+                  Dự án game Arcade lấy cảm hứng từ xếp gạch cổ điển. 
+                  Xây dựng tuyển tập game dựa trên cơ chế tương tác khối.
+                </p>
+              </div>
+              <div className="mt-auto">
+                <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
+                  {['Flutter', 'Flame', 'Game'].map(tag => (
+                    <span key={tag} className="text-[9px] md:text-[10px] font-mono tracking-widest uppercase border border-current px-2 py-1">{tag}</span>
+                  ))}
+                </div>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a href="https://play.google.com/store/apps/details?id=com.duc_innolab.game.tetrafall" className="flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-tighter border-b border-current pb-1 w-fit transition-all hover:text-[#FF0000]">Play Store <ArrowUpRight size={14}/></a>
+                  <a href="https://apps.apple.com/vn/app/tessera-block-puzzle-game/id6758011076" className="flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-tighter border-b border-current pb-1 w-fit transition-all hover:text-[#FF0000]">App Store <ArrowUpRight size={14}/></a>
+                </div>
+              </div>
+            </div>
+
+            {/* Project 02: Modipix */}
+            <a href="https://modipix.app" target="_blank" className="group border-b border-black p-4 md:p-8 flex flex-col justify-between hover:bg-black hover:text-white transition-colors duration-300">
+              <div>
+                <span className="text-4xl md:text-6xl font-black tracking-tighter mb-4 block group-hover:text-[#FF0000]">02</span>
+                <h3 className="text-2xl md:text-4xl font-black uppercase leading-none tracking-tighter mb-4 md:mb-6">Modipix</h3>
+                <p className="text-xs md:text-sm leading-relaxed mb-6 md:mb-8 max-w-md opacity-80">
+                  Công cụ biên tập ảnh mạnh mẽ với khả năng xử lý LUT chuyên nghiệp. 
+                  Tùy biến bố cục, watermark tự động và mở rộng viền thông minh.
+                </p>
+              </div>
+              <div className="mt-auto">
+                <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
+                  {['Flutter', 'Image', 'LUT'].map(tag => (
+                    <span key={tag} className="text-[9px] md:text-[10px] font-mono tracking-widest uppercase border border-current px-2 py-1">{tag}</span>
+                  ))}
+                </div>
+                <span className="flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-tighter border-b border-current pb-1 w-fit transition-all group-hover:text-[#FF0000]">Launch App <ArrowUpRight size={14}/></span>
+              </div>
+            </a>
+
+            {/* Project 03: CyberSafe */}
+            <a href="https://github.com/dducnv/cybersafe_pro" target="_blank" className="group border-b border-black md:border-b-0 md:border-r p-4 md:p-8 flex flex-col justify-between hover:bg-black hover:text-white transition-colors duration-300">
+              <div>
+                <span className="text-4xl md:text-6xl font-black tracking-tighter mb-4 block group-hover:text-[#FF0000]">03</span>
+                <h3 className="text-2xl md:text-4xl font-black uppercase leading-none tracking-tighter mb-4 md:mb-6">CyberSafe</h3>
+                <p className="text-xs md:text-sm leading-relaxed mb-6 md:mb-8 max-w-md opacity-80">
+                  Trình quản lý mật khẩu Offline-first. Mã hóa AES-256 cục bộ với Argon2id. 
+                  Bảo mật tuyệt đối, loại bỏ hoàn toàn phụ thuộc máy chủ.
+                </p>
+              </div>
+              <div className="mt-auto">
+                <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
+                  {['Flutter', 'Security', 'SQL'].map(tag => (
+                    <span key={tag} className="text-[9px] md:text-[10px] font-mono tracking-widest uppercase border border-current px-2 py-1">{tag}</span>
+                  ))}
+                </div>
+                <span className="flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-tighter border-b border-current pb-1 w-fit transition-all group-hover:text-[#FF0000]">View Source <ArrowUpRight size={14}/></span>
+              </div>
+            </a>
+
+            {/* Project 04: Battleship */}
+            <a href="https://github.com/dducnv/battleship" target="_blank" className="group p-4 md:p-8 flex flex-col justify-between hover:bg-black hover:text-white transition-colors duration-300">
+              <div>
+                <span className="text-4xl md:text-6xl font-black tracking-tighter mb-4 block group-hover:text-[#FF0000]">04</span>
+                <h3 className="text-2xl md:text-4xl font-black uppercase leading-none tracking-tighter mb-4 md:mb-6">Battleship</h3>
+                <p className="text-xs md:text-sm leading-relaxed mb-6 md:mb-8 max-w-md opacity-80">
+                  Bắn tàu kinh điển phong cách hiện đại. 
+                  Dàn trận kéo-thả và chiến đấu thời gian thực cực mượt trên Next.js 15.
+                </p>
+              </div>
+              <div className="mt-auto">
+                <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
+                  {['Next.js 15', 'Supabase', 'Game'].map(tag => (
+                    <span key={tag} className="text-[9px] md:text-[10px] font-mono tracking-widest uppercase border border-current px-2 py-1">{tag}</span>
+                  ))}
+                </div>
+                <span className="flex items-center gap-2 text-[10px] md:text-xs font-bold uppercase tracking-tighter border-b border-current pb-1 w-fit transition-all group-hover:text-[#FF0000]">Join Battle <ArrowUpRight size={14}/></span>
+              </div>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 }
