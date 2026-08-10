@@ -36,13 +36,7 @@ export default function RootLayout({
       <head>
         <meta name="google-site-verification" content="dRDnqYlJmIUyDeb5jrw2PprrJisSDrAXeU36j1BwzAg" />
       </head>
-      <body className={`${inter.variable} font-sans antialiased bg-[#FFFFFF] text-[#000000] selection:bg-[#FF0000] selection:text-white`}>
-        {/* --- SYSTEM GRID OVERLAY --- */}
-        <div className="fixed inset-0 pointer-events-none grid grid-cols-12 gap-0 px-4 md:px-8 opacity-[0.03] z-0">
-          {[...Array(12)].map((_, i) => (
-            <div key={i} className="border-l border-black h-full last:border-r" />
-          ))}
-        </div>
+      <body className={`${inter.variable} font-sans antialiased bg-white text-zinc-900 selection:bg-gray-200 selection:text-black`}>
         
         <div className="relative z-10">
           {children}

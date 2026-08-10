@@ -3,21 +3,25 @@ import Link from 'next/link';
 
 export const Navbar = () => {
   return (
-    <nav className="relative z-10 grid grid-cols-1 md:grid-cols-12 border-b border-black px-4 md:px-8">
+    <nav className="relative z-10 flex flex-col md:flex-row justify-between items-center px-6 md:px-12 py-6 gap-4">
       {/* Status Section */}
-      <div className="md:col-span-6 py-4 border-b md:border-b-0 md:border-r border-black flex items-center">
-        <Link href="/" className="flex items-center gap-2 group overflow-hidden">
-          <span className="text-[10px] md:text-[11px] font-mono tracking-[0.15em] md:tracking-[0.2em] uppercase whitespace-nowrap">Status: </span>
-          <span className="text-[10px] md:text-[11px] font-mono tracking-[0.15em] md:tracking-[0.2em] uppercase text-[#FF0000] animate-pulse whitespace-nowrap">● Available for Projects</span>
+      <div className="flex items-center">
+        <Link href="/" className="flex items-center gap-2 group transition-opacity hover:opacity-70">
+          <span className="text-sm font-medium tracking-tight text-zinc-900">Nguyễn Văn Đức</span>
+          <span className="text-zinc-300 mx-2">/</span>
+          <div className="flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            <span className="text-sm font-medium tracking-tight text-zinc-500">Available for work</span>
+          </div>
         </Link>
       </div>
       
       {/* Meta & Links Section */}
-      <div className="md:col-span-6 py-3 md:py-4 flex flex-row justify-between items-center md:pl-8 gap-2 md:gap-4 overflow-hidden">
-        <span className="text-[10px] md:text-[11px] font-mono tracking-[0.15em] md:tracking-[0.2em] uppercase leading-none opacity-60 md:opacity-100 whitespace-nowrap">Indie Dev / 26</span>
-        <div className="flex gap-3 md:gap-4">
-          <a href="https://github.com/dducnv" target="_blank" className="text-[10px] md:text-[11px] font-mono tracking-[0.15em] md:tracking-[0.2em] uppercase hover:text-[#FF0000] transition-colors whitespace-nowrap">GitHub</a>
-          <a href="https://linkedin.com/in/ducnv0712" target="_blank" className="text-[10px] md:text-[11px] font-mono tracking-[0.15em] md:tracking-[0.2em] uppercase hover:text-[#FF0000] transition-colors whitespace-nowrap">LinkedIn</a>
+      <div className="flex items-center gap-6">
+        <span className="text-sm font-medium tracking-tight text-zinc-400 hidden md:block">Indie Dev &copy; 2026</span>
+        <div className="flex gap-4">
+          <a href="https://github.com/dducnv" target="_blank" className="text-sm font-medium tracking-tight text-zinc-500 hover:text-zinc-900 transition-colors">GitHub</a>
+          <a href="https://linkedin.com/in/ducnv0712" target="_blank" className="text-sm font-medium tracking-tight text-zinc-500 hover:text-zinc-900 transition-colors">LinkedIn</a>
         </div>
       </div>
     </nav>
