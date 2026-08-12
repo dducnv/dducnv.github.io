@@ -124,9 +124,26 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Project 04: Battleship */}
+               {/* Project 04: Grutab */}
             <div className="group flex flex-col">
               <span className="text-sm font-light text-zinc-400 mb-6 block">04</span>
+              <h3 className="text-3xl md:text-4xl font-light tracking-tight text-zinc-900 mb-4 group-hover:text-zinc-500 transition-colors">Grutab</h3>
+              <p className="text-base text-zinc-600 leading-relaxed mb-8 max-w-md">
+               Tối ưu hóa trải nghiệm duyệt web của bạn với tiện ích New Tab đa năng. Hệ thống tự động phân nhóm giúp bạn dễ dàng quản lý và truy cập chớp nhoáng các trang web thường dùng. Đồng thời, tính năng học từ vựng được tích hợp sẵn sẽ biến mỗi lần mở tab mới thành một cơ hội ghi nhớ ngoại ngữ thụ động và tự nhiên.
+              </p>
+              <div className="mt-auto">
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {['Web Extension', 'Workflow & Planning'].map(tag => (
+                    <span key={tag} className="text-xs font-medium text-zinc-500 bg-zinc-100 px-3 py-1 rounded-full">{tag}</span>
+                  ))}
+                </div>
+                <a href="https://chromewebstore.google.com/detail/gemckigcdeknjmbldiciafomclkoafok?utm_source=dducnv-postfolio" target="_blank" className="flex items-center gap-2 text-sm font-medium tracking-tight text-zinc-900 hover:text-zinc-500 transition-colors w-fit">Web Store<ArrowUpRight size={16} className="text-zinc-400" /></a>
+              </div>
+            </div>
+
+            {/* Project 05: Battleship */}
+            <div className="group flex flex-col">
+              <span className="text-sm font-light text-zinc-400 mb-6 block">05</span>
               <h3 className="text-3xl md:text-4xl font-light tracking-tight text-zinc-900 mb-4 group-hover:text-zinc-500 transition-colors">Battleship</h3>
               <p className="text-base text-zinc-600 leading-relaxed mb-8 max-w-md">
                 Bắn tàu kinh điển phong cách hiện đại.
