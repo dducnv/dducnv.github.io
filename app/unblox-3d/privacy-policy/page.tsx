@@ -14,7 +14,7 @@ const page = () => {
       <div className="max-w-3xl mx-auto prose lg:prose-xl pt-10 px-5 pb-16">
         <h1 className="text-4xl font-bold text-center mb-6">Privacy Policy</h1>
         <p className="text-center text-gray-500">
-          <strong>Effective Date:</strong> November 11, 2026
+          <strong>Effective Date:</strong> November 22, 2026
         </p>
 
         <p className="mt-6">
@@ -23,7 +23,14 @@ const page = () => {
           Policy describes how we collect, use, and protect your information
           when you play our game on iOS and Android devices. By installing and
           using the game, you agree to the collection and use of information in
-          accordance with this policy.
+          accordance with this policy and our{" "}
+          <Link
+            href="/unblox-3d/term"
+            className="text-blue-600 underline font-medium"
+          >
+            Terms of Use
+          </Link>
+          .
         </p>
 
         <h2 className="font-bold text-2xl mt-8 mb-3">1. Information We Collect</h2>
@@ -151,9 +158,19 @@ const page = () => {
           </li>
         </ul>
 
-        <h2 className="font-bold text-2xl mt-8 mb-3">6. Advertising</h2>
+        <h2 className="font-bold text-2xl mt-8 mb-3">6. Advertising &amp; Lifetime VIP (Pro) Upgrade</h2>
         <p>
-          We may partner with mobile advertising networks (such as Google AdMob) to serve in-game advertisements. These partners may utilize non-personal device identifiers to deliver non-intrusive or rewarded ads. You can manage personalized ad preferences through your device privacy settings (e.g., Apple App Tracking Transparency on iOS or Google Advertising ID on Android).
+          We partner with mobile advertising networks (such as Google AdMob) to serve in-game advertisements that keep Unblox 3D free to play, including gameplay banner ads, occasional between-level interstitial ads, and optional rewarded video ads. You can manage personalized ad preferences through your device privacy settings (e.g., Apple App Tracking Transparency on iOS or Google Advertising ID on Android).
+        </p>
+        <p className="mt-3">
+          <strong>Lifetime VIP (Pro) In-App Purchase:</strong> If you purchase the one-time <strong>Lifetime VIP (Pro)</strong> upgrade, all payment processing is handled directly by the Apple App Store or Google Play Store—we never collect or store your credit card or billing information. Lifetime VIP permanently disables all forced Banner Ads and automatic Interstitial Ads, grants <strong>1 free +3 Hearts instant revive per level attempt</strong>, and automatically <strong>resets your hint balance to 3 free hints on every level or match restart</strong>. Optional, player-initiated Rewarded Video Ads remain available only if you voluntarily choose to request extra hints after exhausting all 3 free hints within the same level, or if you request a second revive after already using your 1 free revive on the same level attempt. For full details on Pro privileges, please see our{" "}
+          <Link
+            href="/unblox-3d/term"
+            className="text-blue-600 underline font-medium"
+          >
+            Terms of Use
+          </Link>
+          .
         </p>
 
         <h2 className="font-bold text-2xl mt-8 mb-3">7. Data Security</h2>
@@ -175,7 +192,7 @@ const page = () => {
         <p>
           If you have any questions, suggestions, or concerns regarding this Privacy Policy or your privacy while playing Unblox 3D, please contact us at:
         </p>
-        <ul className="list-disc pl-10 mt-2">
+        <ul className="list-disc pl-10 mt-2 space-y-1">
           <li>
             Email:{" "}
             <Link
@@ -183,6 +200,15 @@ const page = () => {
               className="text-blue-600 underline font-medium"
             >
               contact.ducnv@gmail.com
+            </Link>
+          </li>
+          <li>
+            Terms of Use:{" "}
+            <Link
+              href="/unblox-3d/term"
+              className="text-blue-600 underline font-medium"
+            >
+              https://dducnv.github.io/unblox-3d/term
             </Link>
           </li>
         </ul>
