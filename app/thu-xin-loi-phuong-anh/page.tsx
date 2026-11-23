@@ -20,7 +20,7 @@ const slides: StorySlide[] = [
     id: 0,
     image: "/hello-kitty/hk_bow_hug.png",
     imageAlt: "Hello Kitty ôm nơ hồng",
-    hugMargin: "mb-3",
+    hugMargin: "-mb-4 sm:-mb-5",
     title: "Gửi Phương Anh",
     content:
       "Biết là em đang giận anh, nhưng anh vẫn muốn gửi đến em một lời xin lỗi thật chân thành.\n\nMấy hôm nay yên ắng lại, anh cứ nghĩ mãi thấy mình hôm trước vụng về và vội vàng.",
@@ -218,10 +218,11 @@ export default function ThuPhuongAnhStory() {
           >
             {/* Hello Kitty ôm mép trên mặt trước phong bì */}
             <div
-              className={`absolute -top-[54px] sm:-top-[62px] left-1/2 -translate-x-1/2 z-40 w-24 sm:w-28 pointer-events-none filter drop-shadow-[0_4px_6px_rgba(244,114,182,0.25)] transition-all duration-300 ${openPhase === "closed"
-                ? "opacity-100 scale-100 translate-y-0"
-                : "opacity-0 scale-90 -translate-y-2"
-                }`}
+              className={`absolute -top-[54px] sm:-top-[62px] left-1/2 -translate-x-1/2 z-40 w-24 sm:w-28 pointer-events-none filter drop-shadow-[0_4px_6px_rgba(244,114,182,0.25)] transition-all duration-300 ${
+                openPhase === "closed"
+                  ? "opacity-100 scale-100 translate-y-0"
+                  : "opacity-0 scale-90 -translate-y-2"
+              }`}
             >
               <Image
                 src="/hello-kitty/hk_peek.png"
