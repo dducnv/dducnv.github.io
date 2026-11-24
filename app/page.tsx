@@ -161,6 +161,27 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            {/* Project 06: Decopix */}
+            <div className="group flex flex-col">
+              <span className="text-sm font-light text-zinc-400 mb-6 block">06</span>
+              <h3 className="text-3xl md:text-4xl font-light tracking-tight text-zinc-900 mb-4 group-hover:text-zinc-500 transition-colors">Decopix</h3>
+              <p className="text-base text-zinc-600 leading-relaxed mb-8 max-w-md">
+                Ứng dụng sáng tạo khung ảnh, ghép lưới collage và cắt ảnh đại diện PFP phong cách Neo-Pop.
+                Hỗ trợ viền doodle, hiệu ứng in retro và xử lý 100% ngoại tuyến trên thiết bị.
+              </p>
+              <div className="mt-auto">
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {['Flutter', 'Photo Frame', 'Collage'].map(tag => (
+                    <span key={tag} className="text-xs font-medium text-zinc-500 bg-zinc-100 px-3 py-1 rounded-full">{tag}</span>
+                  ))}
+                </div>
+                <div className="flex flex-col sm:flex-row gap-6">
+                  <a href="https://play.google.com/store/apps/details?id=com.ducinnovalab.decopix" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium tracking-tight text-zinc-900 hover:text-zinc-500 transition-colors">Play Store <ArrowUpRight size={16} className="text-zinc-400" /></a>
+                  <a href="https://apps.apple.com/app/decopix-photo-frame-collage/id6819029781" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium tracking-tight text-zinc-900 hover:text-zinc-500 transition-colors">App Store <ArrowUpRight size={16} className="text-zinc-400" /></a>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
