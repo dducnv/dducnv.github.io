@@ -14,7 +14,7 @@ const page = () => {
       <div className="max-w-3xl mx-auto prose lg:prose-xl pt-10 px-5 pb-16">
         <h1 className="text-4xl font-bold text-center mb-6">Terms of Use</h1>
         <p className="text-center text-gray-500">
-          <strong>Effective Date:</strong> November 22, 2026
+          <strong>Effective Date:</strong> November 24, 2026
         </p>
 
         <p className="mt-6">
@@ -119,12 +119,24 @@ const page = () => {
             you can always restart the level for free at any time with full
             hearts and 3 fresh hints.
           </li>
+          <li>
+            <strong>
+              Optional Bonus Rewards (Victory x2 Stars &amp; 3-Level Skin Trials):
+            </strong>{" "}
+            Optional Rewarded Video Ads also remain available if you
+            voluntarily choose to double your earned stars (x2 Stars) on
+            eligible Victory screens (such as your daily first win or landmark
+            milestones) or to unlock a 3-level trial of an unowned Legendary or
+            Mythic 3D block skin in the Skin Gallery. These rewards are 100%
+            optional and never appear automatically.
+          </li>
         </ul>
         <p className="mt-3">
           <strong>Summary:</strong> With Lifetime VIP (Pro),{" "}
           <strong>no advertisement will ever appear automatically</strong>. An ad
-          only plays if you explicitly tap a video reward button after using up
-          your 3 free hints or your 1 free revive within a single level attempt.
+          only plays if you explicitly tap a video reward button—such as extra
+          hints beyond 3 per level, a 2nd+ revive in the same level attempt, x2
+          Victory stars, or a 3-level skin trial.
         </p>
 
         <h2 className="font-bold text-2xl mt-8 mb-3">
@@ -182,8 +194,10 @@ const page = () => {
           indirect, incidental, or consequential damages arising out of your use
           or inability to use the game. If you explicitly choose{" "}
           <strong>Reset All Data</strong> in the in-game Settings menu, your
-          local progress, stars, unlocked skins, and local VIP state on that
-          device will be reset.
+          local progress, stars, and unlocked skins on that device will be
+          reset, while any purchased Lifetime VIP (Pro) entitlement remains tied
+          to your Apple ID or Google Play account and automatically re-syncs
+          (or can be restored anytime via <strong>Restore Purchase</strong>).
         </p>
 
         <h2 className="font-bold text-2xl mt-8 mb-3">

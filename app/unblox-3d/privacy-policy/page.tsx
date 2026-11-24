@@ -14,7 +14,7 @@ const page = () => {
       <div className="max-w-3xl mx-auto prose lg:prose-xl pt-10 px-5 pb-16">
         <h1 className="text-4xl font-bold text-center mb-6">Privacy Policy</h1>
         <p className="text-center text-gray-500">
-          <strong>Effective Date:</strong> November 22, 2026
+          <strong>Effective Date:</strong> November 24, 2026
         </p>
 
         <p className="mt-6">
@@ -128,7 +128,29 @@ const page = () => {
             >
               Google AdMob
             </Link>{" "}
-            (when enabled) – may be used in future updates to deliver contextual or rewarded advertisements to keep the game free to play.
+            – delivers gameplay banner ads, occasional between-level interstitial ads, and optional player-initiated rewarded video ads to keep the game free to play.
+          </li>
+          <li>
+            <Link
+              href="https://firebase.google.com/support/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline font-medium"
+            >
+              Firebase Analytics &amp; Crashlytics
+            </Link>{" "}
+            – collects anonymized gameplay telemetry and crash diagnostics to improve level balance, 3D rendering stability, and app performance.
+          </li>
+          <li>
+            <Link
+              href="https://www.revenuecat.com/privacy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline font-medium"
+            >
+              RevenueCat
+            </Link>{" "}
+            – validates Apple App Store and Google Play receipts anonymously to sync and restore your Lifetime VIP (Pro) entitlement across sessions and devices.
           </li>
         </ul>
 
@@ -163,7 +185,7 @@ const page = () => {
           We partner with mobile advertising networks (such as Google AdMob) to serve in-game advertisements that keep Unblox 3D free to play, including gameplay banner ads, occasional between-level interstitial ads, and optional rewarded video ads. You can manage personalized ad preferences through your device privacy settings (e.g., Apple App Tracking Transparency on iOS or Google Advertising ID on Android).
         </p>
         <p className="mt-3">
-          <strong>Lifetime VIP (Pro) In-App Purchase:</strong> If you purchase the one-time <strong>Lifetime VIP (Pro)</strong> upgrade, all payment processing is handled directly by the Apple App Store or Google Play Store—we never collect or store your credit card or billing information. Lifetime VIP permanently disables all forced Banner Ads and automatic Interstitial Ads, grants <strong>1 free +3 Hearts instant revive per level attempt</strong>, and automatically <strong>resets your hint balance to 3 free hints on every level or match restart</strong>. Optional, player-initiated Rewarded Video Ads remain available only if you voluntarily choose to request extra hints after exhausting all 3 free hints within the same level, or if you request a second revive after already using your 1 free revive on the same level attempt. For full details on Pro privileges, please see our{" "}
+          <strong>Lifetime VIP (Pro) In-App Purchase:</strong> If you purchase the one-time <strong>Lifetime VIP (Pro)</strong> upgrade, all payment processing is handled directly by the Apple App Store or Google Play Store (with receipt verification via RevenueCat)—we never collect or store your credit card or billing information. Lifetime VIP permanently disables all forced Banner Ads and automatic Interstitial Ads, grants <strong>1 free +3 Hearts instant revive per level attempt</strong>, and automatically <strong>resets your hint balance to 3 free hints on every level or match restart</strong>. Optional, player-initiated Rewarded Video Ads remain available only when you voluntarily choose to request extra hints after exhausting all 3 free hints within the same level, request a second revive after using your 1 free revive on the same level attempt, double your earned stars (x2 Stars) on Victory, or activate a 3-level trial of a locked 3D block skin. For full details on Pro privileges, please see our{" "}
           <Link
             href="/unblox-3d/term"
             className="text-blue-600 underline font-medium"
